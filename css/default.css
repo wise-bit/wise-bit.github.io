@@ -19,6 +19,11 @@ body, html {
     min-height: 100%;
 }
 
+.bgimg-11 {
+    background-image: url('../images/parallax1.png');
+    min-height: 400px;
+}
+
 /* Second image (Portfolio) */
 .bgimg-2 {
     background-image: url("../images/parallax2.jpg");
