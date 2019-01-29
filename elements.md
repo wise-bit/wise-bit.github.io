@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Resume
+title: Elements
 nav-menu: true
 ---
 
