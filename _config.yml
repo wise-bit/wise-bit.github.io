@@ -11,7 +11,7 @@ city: Toronto
 state: Ontario
 zip_code: # Zip
 country: Canada
-phone: #Phone number
+phone: Currently not provided #Phone number
 
 # homepage tiles
 tiles-source: pages # accepts "posts" or "pages"
