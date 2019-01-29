@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Resumé
+title: Resume
 description: View My CV
 nav-menu: true
 ---
