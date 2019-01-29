@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Resume
-description: View My CV
 nav-menu: true
 ---
 
@@ -12,7 +11,7 @@ nav-menu: true
 <section id="one">
 	<div class="inner">
 		<header class="major">
-			<h1>Elements</h1>
+			<h1>Resumé</h1>
 		</header>
 
 <!-- Content -->
