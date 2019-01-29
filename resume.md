@@ -1,6 +1,7 @@
 ---
 layout: page
-title: ElementsTest
+title: Resumé
+description: View My CV
 nav-menu: true
 ---
 
