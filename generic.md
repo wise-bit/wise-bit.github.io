@@ -1,13 +1,46 @@
 ---
 layout: post
-title: Generic
-description: Lorem ipsum dolor est
+title: Jobs and Achievements
+description: List of all my past jobs, activities and achievements
 image: assets/images/pic11.jpg
 nav-menu: true
 ---
 
-Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.
+<!-- Main -->
+<div id="main" class="alt">
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.
 
-Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.
+<!-- One -->
+<section id="one">
+	<div class="inner">
+		<header class="major">
+			<h1>Jobs and Achievements</h1>
+		</header>
+    </div>
+
+
+<h3>Jobs Portfolio</h3>
+
+<ul class="alt">
+    <li>1. Voluntary Peer Tutoring in Computer Science - Including ESL Students - who were having difficulties understanding the concepts of computer programming and computing theories in Java and Python.</li>
+    <li>2. Paid tutoring to high school students of grades 9 - 11, in the subjects of Mathematics and Computer Science.</li>
+</ul>
+
+
+
+<h3>Past Activities</h3>
+
+<ul class="alt">
+
+    <li>1. Active member of Bur Oak Secondary School Robotics Club.</li> 
+    <li>2. Computer Programming to develop software of varying purposes and levels of difficulties with focuses such as facial recognition and user experience. 
+        Github: https://github.com/wise-bit </li>
+    <li>3. President of the Bur Oak Secondary School Mock Trial Club - coordination of club activities and preparation for competitions.</li>
+    <li>4. Lester B. Pearson School Board Central Students' Committee - Vice Chairman and active member for two years.</li>
+    <li>5. Pierrefonds Comprehensive High School Robotics and Programming club - Lead Programmer in the club and at competitions.</li>
+
+</ul>
+
+</section>
+
+<div>
