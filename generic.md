@@ -33,8 +33,8 @@ nav-menu: true
 <ul class="alt">
 
     <li>1. Active member of Bur Oak Secondary School Robotics Club.</li> 
-    <li>2. Computer Programming to develop software of varying purposes and levels of difficulties with focuses such as facial recognition and user experience. 
-        Github: https://github.com/wise-bit </li>
+    <li>2. Computer Programming to develop software of varying purposes and levels of difficulties with focuses such as machine learning, facial recognition and user experience. 
+        <b>Github</b>: <a href="https://github.com/wise-bit"><h4 style="display: inline;">github.com/wise-bit</h4></a> </li>
     <li>3. President of the Bur Oak Secondary School Mock Trial Club - coordination of club activities and preparation for competitions.</li>
     <li>4. Lester B. Pearson School Board Central Students' Committee - Vice Chairman and active member for two years.</li>
     <li>5. Pierrefonds Comprehensive High School Robotics and Programming club - Lead Programmer in the club and at competitions.</li>
