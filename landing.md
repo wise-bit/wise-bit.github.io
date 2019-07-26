@@ -1,7 +1,7 @@
 ---
 title: List Of Personal Projects
 layout: landing
-description: 'This project contains a list of projects I<br />have worked on over time.'
+description: 'This page contains a list of projects I<br />have worked on over time.'
 image: assets/images/pic07.jpg
 nav-menu: true
 ---
@@ -75,11 +75,11 @@ nav-menu: true
 <section id="three">
 	<div class="inner">
 		<header class="major">
-			<h2>Massa libero</h2>
+			<h2>HTML5 Projects</h2>
 		</header>
-		<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
+		<p>I have also experimented with HTML5 and its connected aspects such as Javascript and Node, and certain modules such as p5, based on my knowledge of Processing.</p>
 		<ul class="actions">
-			<li><a href="generic.html" class="button next">Get Started</a></li>
+			<li><a href="direct_projects/projectsLanding.md" class="button next">Get Started</a></li>
 		</ul>
 	</div>
 </section>
