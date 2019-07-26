@@ -79,7 +79,7 @@ nav-menu: true
 		</header>
 		<p>I have also experimented with HTML5 and its connected aspects such as Javascript and Node, and certain modules such as p5, based on my knowledge of Processing.</p>
 		<ul class="actions">
-			<li><a href="direct_projects/projectsLanding.md" class="button next">Get Started</a></li>
+			<li><a href="direct/projectlanding.md" class="button next">Get Started</a></li>
 		</ul>
 	</div>
 </section>
