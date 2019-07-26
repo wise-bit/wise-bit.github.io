@@ -91,6 +91,11 @@ function mousePressed() {
   
 }
 
+function touchStarted() {
+  mousePressed();
+  return false;
+}
+
 function nextTurn() {
 
   if (available.length == 8)
