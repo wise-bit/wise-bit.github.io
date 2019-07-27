@@ -1,7 +1,7 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 body, html {
     height: 100%;
-    color: #777;
+    color: #222;
     line-height: 1.8;
 }
 
@@ -47,10 +47,14 @@ body, html {
 }
 
 #navigationbar {
-	color: black;
-	background-color: rgb(228, 228, 228);
+	color: white;
+	background-color: black;
 	/* opacity: 0.5; */
   filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+#googlemap {
+    border: 2px solid black;
 }
 
 .button {
@@ -60,10 +64,14 @@ body, html {
   padding-right: 30px;
   padding-left: 30px;
   position: relative;
-  background-color: green;
-  color: white;
+  background-color: white;
+  font-weight: bold;
+  color: black;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 15px;
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: black;
 }
