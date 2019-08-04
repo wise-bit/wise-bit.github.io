@@ -20,7 +20,9 @@ let maxWidth; // highest width while still fitting game on screen
 let maxHeight; // highest height while still fitting game on screen
 let s; //smaller dimension recorded for scaling purposes
 
-let button;
+let AItoggleButton;
+let lightGreen;
+let lightRed;
 
 let finished = false;
 
@@ -33,6 +35,19 @@ let activateAI = false;
 let x_wins = 0;
 let y_wins = 0;
 let draws = 0;
+
+function setup() {
+
+  AItoggleButton = createButton('Toggle AI');
+  lightGreen = color(196, 224, 157)
+  lightRed = color(255, 158, 158);
+
+  dimensions();
+  console.log(maxWidth, maxHeight, windowWidth, windowHeight);
+  createCanvas(maxWidth, maxHeight);
+  resetBoard();
+
+}
 
 function dimensions() {
 
@@ -78,22 +93,17 @@ function robotDriven() {
   frameRate(1);
 }
 
-function setup() {
-
-  dimensions();
-  console.log(maxWidth, maxHeight, windowWidth, windowHeight);
-  createCanvas(maxWidth, maxHeight);
-  resetBoard();
-
-}
-
 function mousePressed() {
 
-  if (finished) {
-    resetBoard();
-    loop();
-  } else {
-    frameRate(100);
+  if (mouseY < windowHeight*6.7/8) {
+
+    if (finished) {
+      resetBoard();
+      loop();
+    } else {
+      frameRate(100);
+    }
+
   }
 
   return false;
@@ -218,20 +228,42 @@ function drawScoreboard() {
   stroke(255);
   // textStyle(ITALIC);
   textAlign(CENTER);
-  text(`X wins: ${x_wins}`, maxWidth/5, maxHeight * 7.6/8);
-  text(`O wins: ${y_wins}`, maxWidth/2, maxHeight * 7.6/8);
-  text(`Draws: ${draws}`, maxWidth*4.1/5, maxHeight * 7.6/8);
+  text(`X wins: ${x_wins}`, maxWidth/5, maxHeight * 7.2/8);
+  text(`O wins: ${y_wins}`, maxWidth/2, maxHeight * 7.2/8);
+  text(`Draws: ${draws}`, maxWidth*4.1/5, maxHeight * 7.2/8);
 }
 
 function toggleAI() {
   activateAI = !activateAI;
+  buttonColor();
+}
+
+function buttonColor() {
+  if (activateAI)
+    AItoggleButton.style('background-color', lightGreen);
+  else
+    AItoggleButton.style('background-color', lightRed);
+}
+
+function drawButton() {
+  AItoggleButton.style("height", "40px");
+  AItoggleButton.style("width", "240px");
+
+  buttonColor();
+
+  AItoggleButton.style("border", "none");
+  AItoggleButton.style("text-align", "center");
+  AItoggleButton.style("text-decoration", "none");
+  AItoggleButton.style("display", "inline-block");
+  AItoggleButton.style("font-size", "16px");
+
+  AItoggleButton.position(maxWidth/2 - AItoggleButton.width/2.5, maxHeight * 7.5/8);
+  AItoggleButton.mousePressed(toggleAI);
 }
 
 function draw() {
 
-  // button = createButton('Toggle AI');
-  // button.position(0, 65);
-  // button.mousePressed(toggleAI);
+  drawButton();
 
   background(255);
 
@@ -245,7 +277,7 @@ function draw() {
   let w = d;
   let h = d;
 
-  let space = maxHeight / 6;
+  let space = maxHeight / 7;
    
   fill('black');
   textFont('Helvetica');
@@ -257,8 +289,8 @@ function draw() {
   text("Auto", maxWidth/2, maxHeight*1/20);
 
   textStyle(NORMAL);
-  textSize(maxWidth / 10);
-  text("TIC-TAC-TOE", maxWidth/2, maxHeight*1/8);
+  textSize(maxWidth / 12);
+  text("TIC-TAC-TOE", maxWidth/2, maxHeight*1/9);
 
   for (let j = 0; j < 3; j++) {
     for (let i = 0; i < 3; i++) {
