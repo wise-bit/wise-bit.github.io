@@ -1,0 +1,100 @@
+body {
+	background-color: #c2daff;
+	color: #3a6ab5;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 10px solid #3a6ab5;
+}
+
+body::before {
+    top: 10px;
+}
+
+@media (max-width: 1000px) {
+	body::before {
+		content: "";
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		border: 10px solid #3a6ab5;
+	}
+
+	body::before {
+		top: 0px;
+	}
+}
+
+.vertical-center {
+  margin-top: 50px;
+}
+
+.information {
+	/*border: 1px solid black;*/
+}
+
+.interactive {
+	/*border: 1px solid black;*/
+}
+
+.headline {
+	font-size: 48px;
+	font-weight: bold;
+}
+
+.subline {
+	font-size: 24px;
+}
+
+.headline-2 {
+	padding-top: 20px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.projects-list-solo {
+	padding-top: 210px;
+}
+
+@media (max-width: 1000px) {
+	.projects-list-solo {
+		padding-top: 20px;
+	}
+}
+
+.block {
+	margin-bottom: 10px;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th {
+	border-top: none;
+}
+
+.clickable-content {
+	height:100%;
+	width:100%;
+}
+
+.link-item:hover {
+	background-color: #3a6ab5;
+	color: #c2daff;
+	cursor:pointer;
+}
+
+.link-item {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+a { 
+	text-decoration: none; 
+}
