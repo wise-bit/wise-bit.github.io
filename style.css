@@ -13,11 +13,9 @@ html::before {
   outline: 20px solid #3a6ab5;
   padding: 25px;
 }
-
 html::before {
     top: 20px;
 }
-
 body::before {
   content: "";
   position: fixed;
@@ -28,43 +26,8 @@ body::before {
   outline: 8px solid #c2daff;
   padding: 25px;
 }
-
 body:before {
 	top: 8px;
-}
-
-@media (max-width: 1200px) {
-	html::before {
-		content: "";
-		position: fixed;
-		top: 0px;
-		left: 20px;
-		right: 20px;
-		bottom: 0px;
-		outline: 20px solid #3a6ab5;
-		padding: 25px;
-	}
-
-	html::before {
-		top: 0px;
-		bottom: 0px;
-	}
-
-	body::before {
-		content: "";
-		position: fixed;
-		top: 0px;
-		left: 8px;
-		right: 8px;
-		bottom: 0px;
-		outline: 8px solid #c2daff;
-		padding: 25px;
-	}
-
-	body:before {
-		top: 0px;
-		bottom: 0px;
-	}
 }
 
 .vertical-center {
@@ -90,20 +53,8 @@ body:before {
 	font-style: italic;
 }
 
-.headline-2 {
-	padding-top: 20px;
-	font-size: 30px;
-	font-weight: bold;
-}
-
 .projects-list-solo {
 	padding-top: 210px;
-}
-
-@media (max-width: 1200px) {
-	.projects-list-solo {
-		padding-top: 20px;
-	}
 }
 
 .block {
@@ -118,6 +69,7 @@ body:before {
 .clickable-content {
 	height:100%;
 	width:100%;
+	font-size: 16px;
 }
 
 .link-item:hover {
@@ -149,4 +101,68 @@ a {
 
 .tab-content .tab-pane {
 	font-weight: 500;
+}
+
+
+
+/* ----------------------------------------- */
+
+@media (max-width: 1200px) {
+	html::before {
+		content: "";
+		position: fixed;
+		top: 0px;
+		left: 20px;
+		right: 20px;
+		bottom: 0px;
+		outline: 20px solid #3a6ab5;
+		padding: 25px;
+	}
+	html::before {
+		top: 0px;
+		bottom: 0px;
+	}
+	body::before {
+		content: "";
+		position: fixed;
+		top: 0px;
+		left: 8px;
+		right: 8px;
+		bottom: 0px;
+		outline: 8px solid #c2daff;
+		padding: 25px;
+	}
+	body:before {
+		top: 0px;
+		bottom: 0px;
+	}
+
+	.projects-list-solo {
+		padding-top: 20px;
+	}
+
+	.headline {
+		font-size: 96px;
+		font-weight: bold;
+	}
+
+	.subline {
+		font-size: 56px;
+		font-weight: bold;
+		font-style: italic;
+	}
+
+	.link-item {
+		font-weight: bold;
+		font-size: 56px;
+	}
+
+	#list-tab {
+		font-size: 36px;
+	}
+
+	#nav-tabContent {
+		margin-top: 20px;
+		font-size: 48px;
+	}
 }
