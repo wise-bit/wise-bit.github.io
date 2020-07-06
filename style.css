@@ -41,6 +41,7 @@ body:before {
 .interactive {
 	/*border: 4px solid black;*/
 	margin-top: 85px;
+	margin-left: 50px;
 }
 
 .headline {
@@ -254,6 +255,7 @@ a {
 
 	.interactive {
 		margin-top: 10px;
+		margin-left: 0px;
 	}
 
 	.tic-tac-toe-area {
