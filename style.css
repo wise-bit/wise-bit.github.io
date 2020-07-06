@@ -6,28 +6,28 @@ body {
 html::before {
   content: "";
   position: fixed;
-  top: 20px;
+  top: 0px;
   left: 20px;
   right: 20px;
-  bottom: 20px;
+  bottom: 0px;
   outline: 20px solid #3a6ab5;
   padding: 25px;
 }
 html::before {
-    top: 20px;
+    top: 0px;
 }
 body::before {
   content: "";
   position: fixed;
-  top: 8px;
+  top: 0px;
   left: 8px;
   right: 8px;
-  bottom: 8px;
+  bottom: 0px;
   outline: 8px solid #c2daff;
   padding: 25px;
 }
 body:before {
-	top: 8px;
+	top: 0px;
 }
 
 .vertical-center {
@@ -39,7 +39,8 @@ body:before {
 }
 
 .interactive {
-	/*border: 1px solid black;*/
+	/*border: 4px solid black;*/
+	margin-top: 85px;
 }
 
 .headline {
@@ -53,11 +54,11 @@ body:before {
 	font-style: italic;
 }
 
-.projects-list-solo {
-	padding-top: 210px;
+.subsubline {
+	font-size: 18px;
 }
 
-.block {
+.content-block {
 	margin-bottom: 10px;
 }
 
@@ -88,15 +89,15 @@ a {
 }
 
 .list-group .list-group-item {
-  background-color: white;
-  color: #3a6ab5;
-  border: 1px solid #3a6ab5;
-  font-weight: 500;
+	background-color: white;
+	color: #3a6ab5;
+	border: 1px solid #3a6ab5;
+	font-weight: 500;
 }
 
 .list-group .list-group-item:hover {
-  background-color: #02a345;
-  color: white;
+	background-color: #02a345;
+	color: white;
 }
 
 .tab-content .tab-pane {
@@ -104,8 +105,93 @@ a {
 }
 
 
+/* ----------------------------------------- */
+
+
+.tictactoe-reset {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 4px;
+	font-weight: bold;
+}
+
+.tictactoe-reset:hover {
+  cursor: pointer;
+  background: green;
+  color: white;
+}
+
+.tic-tac-toe-area {
+	display: grid;
+	width: 300px;
+	height: 300px;
+	grid-template-columns: auto auto auto;
+}
+
+.block {
+	display: flex;
+	width: 100px;
+	height: 100px;
+	align-items: center;
+	justify-content: center;
+	font-size: 3rem;
+	font-weight: bold;
+	border: 3px solid black;
+}
+
+.block:hover {
+	cursor: cell;
+	background: #0ff30f;
+}
+
+.occupied:hover {
+	background: #ff3a3a;
+}
+
+#block_0,
+#block_1,
+#block_2 {
+  border-top: none;
+}
+
+#block_0,
+#block_3,
+#block_6 {
+  border-left: none;
+}
+
+#block_6,
+#block_7,
+#block_8 {
+  border-bottom: none;
+}
+
+#block_2,
+#block_5,
+#block_8 {
+  border-right: none;
+}
+
+.humanWin {
+  color: green;
+}
+
+.computerWin {
+  color: red;
+}
+
+.draw {
+  color: orangered;
+}
+
 
 /* ----------------------------------------- */
+
 
 @media (max-width: 1200px) {
 	html::before {
@@ -137,10 +223,6 @@ a {
 		bottom: 0px;
 	}
 
-	.projects-list-solo {
-		padding-top: 20px;
-	}
-
 	.headline {
 		font-size: 96px;
 		font-weight: bold;
@@ -150,6 +232,10 @@ a {
 		font-size: 56px;
 		font-weight: bold;
 		font-style: italic;
+	}
+
+	.subsubline {
+		font-size: 48px;
 	}
 
 	.link-item {
@@ -163,6 +249,25 @@ a {
 
 	#nav-tabContent {
 		margin-top: 20px;
+		font-size: 48px;
+	}
+
+	.interactive {
+		margin-top: 10px;
+	}
+
+	.tic-tac-toe-area {
+		width: 750px;
+		height: 750px;
+	}
+
+	.block {
+		width: 250px;
+		height: 250px;
+		font-size: 10rem;
+	}
+
+	.tictactoe-reset {
 		font-size: 48px;
 	}
 }
