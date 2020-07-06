@@ -1,6 +1,14 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
 	background-color: #c2daff;
 	color: #3a6ab5;
+	margin: 0 0 10px;
+    /* bottom = footer height */
+    padding: 5px;
 }
 
 html::before {
@@ -47,6 +55,7 @@ body:before {
 .headline {
 	font-size: 48px;
 	font-weight: bold;
+	text-decoration: underline;
 }
 
 .subline {
@@ -103,6 +112,22 @@ a {
 
 .tab-content .tab-pane {
 	font-weight: 500;
+}
+
+footer {
+	font-family: Consolas;	
+	background-color: #3a6ab5;
+	color: white;
+	position: absolute;
+	text-align: center;
+	left: 0;
+	bottom: 0;
+	left: 20px;
+  	right: 20px;
+	height: 100px;
+	overflow: hidden;
+	height: 30px;
+	padding-top: 3px;
 }
 
 
