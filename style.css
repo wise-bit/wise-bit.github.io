@@ -88,6 +88,7 @@ a {
 	color: #3a6ab5;
 	border: 1px solid #3a6ab5;
 	font-weight: 500;
+	overflow: hidden;
 }
 
 .list-group .list-group-item:hover {
