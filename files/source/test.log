@@ -1,0 +1,119 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.20)  11 JAN 2021 00:37
+entering extended mode
+**./test.tex
+(test.tex
+LaTeX2e <2018-12-01>
+("C:\Users\satra\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
+("C:\Users\satra\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size12.clo"
+File: size12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Users\satra\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tree-dvips\lingmac
+ros.sty"
+\c@enums=\count88
+\widelabel=\dimen103
+\c@tempcnt=\count89
+\c@enumsi=\count90
+\eeindent=\dimen104
+)
+("C:\Users\satra\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tree-dvips\tree-dv
+ips.sty"
+tree-dvips version .91 of May 16, 1995
+\nodemargin=\dimen105
+\treelinewidth=\dimen106
+\dashlength=\dimen107
+\arrowwidth=\dimen108
+\arrowlength=\dimen109
+\arrowinset=\dimen110
+\pos@t=\toks14
+\pos@b=\toks15
+\pos@l=\toks16
+\pos@r=\toks17
+\pos@tl=\toks18
+\pos@tr=\toks19
+\pos@bl=\toks20
+\pos@br=\toks21
+\@arrow=\count91
+\@tempdimc=\dimen111
+) (test.aux)
+\openout1 = `test.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 17.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 17.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 17.
+ [1
+
+
+Non-PDF special ignored!
+<special> header=tree-dvips91.pro
+{C:/Users/satra/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+Non-PDF special ignored!
+<special> ps:@beginspec/nodemargin 2.0 pt def 0.3 pt setlinewidth [] 0 setd...
+Non-PDF special ignored!
+<special> ps:@beginspec/nodemargin 2.0 pt def 0.3 pt setlinewidth [] 0 setd...
+Non-PDF special ignored!
+<special> ps:@beginspec/nodemargin 2.0 pt def 0.3 pt setlinewidth [] 0 setd...
+Non-PDF special ignored!
+<special> ps:@beginspec/nodemargin 2.0 pt def 0.3 pt setlinewidth [] 0 setd...
+Non-PDF special ignored!
+<special> ps:@beginspec/nodemargin 2.0 pt def 0.3 pt setlinewidth [] 0 setd...
+Non-PDF special ignored!
+<special> ps:@beginspec/nodemargin 2.0 pt def 0.3 pt setlinewidth [] 0 setd...
+Non-PDF special ignored!
+<special> ps:@beginspec/nodemargin 2.0 pt def 0.3 pt setlinewidth [] 0 setd...
+Non-PDF special ignored!
+<special> ps:@beginspec/nodemargin 2.0 pt def 0.3 pt setlinewidth [] 0 setd...
+Non-PDF special ignored!
+<special> ps:@beginspec/nodemargin 2.0 pt def 0.3 pt setlinewidth [] 0 setd...
+] (test.aux) ) 
+Here is how much of TeX's memory you used:
+ 348 strings out of 492946
+ 4258 string characters out of 3126266
+ 65324 words of memory out of 3000000
+ 4311 multiletter control sequences out of 15000+200000
+ 8844 words of font info for 31 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 22i,9n,19p,136b,260s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/satra/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmbx10.pfb><C:/Users/satra/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/satra/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/satra/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/sat
+ra/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+C:/Users/satra/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr12.pfb><C:/Users/satra/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmsy8.pfb><C:/Users/satra/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmti12.pfb>
+Output written on test.pdf (1 page, 88793 bytes).
+PDF statistics:
+ 38 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
