@@ -26,6 +26,10 @@ hr {
 
 .moon {
 	font-size: 32px;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	bottom: 20px;
 }
 
 .vertical-center {
