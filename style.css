@@ -21,6 +21,7 @@ body {
     animation: fadeInAnimation ease 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    transition: background 0.3s;
 }
 
 @keyframes fadeInAnimation {
