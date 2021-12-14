@@ -17,6 +17,19 @@ body {
     /* bottom = footer height */
     padding: 1vh;
     font-family: monaco, Consolas, Lucida Console, monospace; 
+
+    animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 hr {
@@ -61,6 +74,7 @@ hr {
 	outline: none;
 	background-color: var(--main-fg-color);
 	color: var(--main-bg-color) !important;
+	border-radius: 0.5vh;
 	/*border:0.5vh solid var(--main-fg-color);*/
 	display: flex;           /* establish flex container */
     flex-direction: column;  /* make main axis vertical */
