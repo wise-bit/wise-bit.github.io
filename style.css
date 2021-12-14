@@ -29,7 +29,21 @@ hr {
 	position: fixed;
 	top: 20px;
 	right: 20px;
-	bottom: 20px;
+	z-index: 999;
+}
+
+.moon-button {
+	border-color: transparent;
+	border-radius: 4px;
+	width: 80px;
+	height: 80px;
+	outline: none;
+	background-color: var(--main-fg-color);
+	color: var(--main-bg-color);;
+}
+
+*:focus {
+    outline: 0 !important;
 }
 
 .vertical-center {
@@ -87,6 +101,7 @@ hr {
 }
 
 .link-item {
+	border-radius: 4px;
 	font-weight: bold;
 	font-size: 20px;
 }
