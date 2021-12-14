@@ -1,4 +1,4 @@
-var darkMode = false;
+var darkMode = true;
 
 jQuery(document).ready(function($) {
     $(".clickable-content").click(function() {
@@ -9,12 +9,12 @@ jQuery(document).ready(function($) {
 		if (darkMode) {
 			$(':root').css({
 		        '--main-bg-color': 'white',
-		        '--main-fg-color': 'black'
+		        '--main-fg-color': '#222'
 		    });
 		    darkMode = false;
 		} else {
 			$(':root').css({
-		        '--main-bg-color': 'black',
+		        '--main-bg-color': '#222',
 		        '--main-fg-color': 'white'
 		    });
 		    darkMode = true;

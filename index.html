@@ -46,29 +46,33 @@
 
 	<body>
 		<div class="float-right moon" id="moon">
-			<button class="p-3 moon-button"><i class="fas fa-moon"></i></button>
+			<button class="moon-button"><i class="fas fa-moon"></i></button>
 		</div>
+
+		<div class="float-right language" id="language" data-toggle="tooltip" title="Coming soon!" data-placement="left">
+			<div class="moon-button" disabled><i class="fas fa-language"></i></div>
+		</div>
+
 		<div class="container-fluid vertical-center">
 			<div class="row no-gutters">
 				<div class="col-xs-2 col-xl-3"></div>
 				<div class="col-xs-8 col-xl-5">
 					<div class="information">
-						<div class="content-block headline mt-1 ml-4 pr-4">
+						<div class="content-block headline">
 							Hi, I'm Sat.
 						</div>
-						<div class="content-block subline mt-3 ml-4 pr-4">
+						<div class="content-block subline">
 							I write code and do stuff, some of which almost works (sometimes)
 						</div>
-						<div class="content-block intro-line mt-3 ml-4 pr-4">
+						<div class="content-block intro-line">
 							Currently a Computer Science and Mathematics Dual Major student at the University of Ottawa.
 						</div>
-						<div class="content-block mt-5 ml-3">
+						<div class="content-block">
 							<table class="table borderless">
 									<tbody>
 									<tr>
 										<td class="link-item clickable-content" data-href="https://github.com/wise-bit" scope="col">
-											<div>
-												<i class="fa fa-github"></i>
+											<div><i class="fa fa-github"></i>
 												Github
 											</div>
 										</td>
@@ -86,125 +90,26 @@
 										</td>
 									</tr>
 									<tr>
-										<td class="link-item clickable-content" scope="col" data-href="mailto:satrajit314@gmail.com" data-toggle="tooltip" title="satrajit314@gmail.com" data-placement="bottom">
+										<td class="link-item clickable-content" scope="col" data-href="mailto:satrajit314@gmail.com" data-toggle="tooltip" title="satrajit314@gmail.com" data-placement="top">
 											<i class="fa fa-user"></i>
 											Email
 										</td>
 									</tr>
 								</tbody>
 							</table>
-
-							<div class="content-block projects-list-solo mt-5 pr-4 mb-5">
-								<div class="row">
-									<div class="col-xs-12 col-xl-5">
-										<div class="list-group" id="list-tab" role="tablist">
-											<a class="list-group-item list-group-item-action list-header active" id="project-list-1-list" data-toggle="list" href="#project-list-1" role="tab" aria-controls="home">
-												Projects
-											</a>
-											<a class="list-group-item list-group-item-action" id="project-list-2-list" data-toggle="list" href="#project-list-2" role="tab" aria-controls="profile">
-												Reconattendance
-											</a>
-											<a class="list-group-item list-group-item-action" id="project-list-3-list" data-toggle="list" href="#project-list-3" role="tab" aria-controls="messages">
-												EZFitness
-											</a>
-											<a class="list-group-item list-group-item-action" id="project-list-4-list" data-toggle="list" href="#project-list-4" role="tab" aria-controls="settings">
-												G3PO
-											</a>
-										</div>
-										</div>
-										<div class="col-xs-10 col-xl-7">
-										<div class="tab-content" id="nav-tabContent">
-											<div class="tab-pane fade show active" id="project-list-1" role="tabpanel" aria-labelledby="project-list-1-list">
-												Browse through a <u>few</u> of the things I've made in the past.
-											</div>
-											<div class="tab-pane fade" id="project-list-2" role="tabpanel" aria-labelledby="project-list-2-list">
-												Reconattendance takes classroom attendance automatically when the students walk into the room using a personalized algorithm. <br><br>
-												<a href="https://github.com/wise-bit/recon-attendance">github.com/wise-bit/recon-attendance</a>
-											</div>
-											<div class="tab-pane fade" id="project-list-3" role="tabpanel" aria-labelledby="project-list-3-list">
-												Improved workout experience through fast record keeping, exercise information, user history, and personalized exercise chart based on experience. <br><br>
-												<a href="https://github.com/wise-bit/ez-fitness">github.com/wise-bit/ez-fitness</a>
-											</div>
-											<div class="tab-pane fade" id="project-list-4" role="tabpanel" aria-labelledby="project-list-4-list">
-												Bioinformatics software used to analyze genetic code and make observations based on machine learning algorithms and analyzing past data. <br><br>
-												<a href="https://github.com/wise-bit/g3po">github.com/wise-bit/g3po</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="content-block jobs-list-solo mt-5 pr-4 mb-5">
-								<div class="row">
-									<div class="col-xs-12 col-xl-5">
-										<div class="list-group" id="list-tab" role="tablist">
-											<a class="list-group-item list-group-item-action active list-header" id="jobs-list-1-list" data-toggle="list" href="#jobs-list-1" role="tab" aria-controls="home" style="font-weight: 1000">
-												Work Experience
-											</a>
-											<a class="list-group-item list-group-item-action" id="jobs-list-2-list" data-toggle="list" href="#jobs-list-2" role="tab" aria-controls="profile">
-												uOttawa Outreach
-											</a>
-											<a class="list-group-item list-group-item-action" id="jobs-list-3-list" data-toggle="list" href="#jobs-list-3" role="tab" aria-controls="messages">
-												CSSA
-											</a>
-											<a class="list-group-item list-group-item-action" id="jobs-list-4-list" data-toggle="list" href="#jobs-list-4" role="tab" aria-controls="messages">
-												Tutoring
-											</a>
-										</div>
-										</div>
-										<div class="col-xs-10 col-xl-7">
-										<div class="tab-content" id="nav-tabContent">
-											<div class="tab-pane fade show active" id="jobs-list-1" role="tabpanel" aria-labelledby="jobs-list-1-list">
-												Have a look through my experiences!  
-											</div>
-											<div class="tab-pane fade" id="jobs-list-2" role="tabpanel" aria-labelledby="jobs-list-2-list">
-												COOP Student working for uOttawa as a software developer, developing both frontend and backend. <br><br>
-											</div>
-											<div class="tab-pane fade" id="jobs-list-3" role="tabpanel" aria-labelledby="jobs-list-3-list">
-												<i>uOttawa Computer Science Students Association</i> <br><br>
-												Academic vice-president responsible for organizing academic events and handeling academic communication. <br><br>
-											</div>
-											<div class="tab-pane fade" id="jobs-list-4" role="tabpanel" aria-labelledby="jobs-list-4-list">
-												Tutored Students in mathematics and computer science throughout high-school. <br><br>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
 						</div>
-					</div>
-					<hr>
-					<div class="interactive">
-						<div class="content-block subline mt-1 pr-4">
-							Enjoy your visit, play a game. <br>
-							<div class="subsubline">(Don't worry, the computer's really bad at it)</div>
-						</div>
-
-						<div class="game-container mt-5 ml-4 pr-4 mb-5">
-							<div class="tic-tac-toe-area mb-5">
-								<div id="block_0" class="block"></div>
-								<div id="block_1" class="block"></div>
-								<div id="block_2" class="block"></div>
-								<div id="block_3" class="block"></div>
-								<div id="block_4" class="block"></div>
-								<div id="block_5" class="block"></div>
-								<div id="block_6" class="block"></div>
-								<div id="block_7" class="block"></div>
-								<div id="block_8" class="block"></div>
+						<div class="content-block">
+							<div class="link-item clickable-content projects-button" data-href="" data-toggle="tooltip" title="Under maintenance for the new year!" data-placement="top">
+								Projects and hobbies!
 							</div>
-							<h2 id="winner" class="subline subsubline">I wonder who will win...</h2>
-							<br>
-				 			<button class="tictactoe-reset" onclick="reset_board()">RESET</button>
 						</div>
-						<script type="text/javascript" src="app.js"></script>
 					</div>
 				</div>
 				<div class="col-xs-2 col-xl-4"></div>
 			</div>
 		</div>
-		<div class="m-3 text-center footer">
+<!-- 		<div class="m-3 footer justify-content-center">
 			<p>Satrajit Chatterjee - 2021</p>
-		</div>
+		</div> -->
 	</body>
 </html>
