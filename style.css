@@ -1,7 +1,7 @@
 :root {
   /*--main-bg-color: #e0ffea;*/
-  --main-bg-color: #222;
-  --main-fg-color: white;
+  --main-bg-color: white;
+  --main-fg-color: #222;
   --primary-text: #3a6ab5;
 }
 
@@ -154,15 +154,23 @@ hr {
 	color: var(--main-fg-color);
 }
 
+.non-clickable-content {
+	height:100%;
+	width:100%;
+	font-size: 3vh;
+	color: var(--main-fg-color);
+}
+
+.link-item {
+	padding: 1vh;
+	border-radius: 0.5vh;
+	font-weight: bold;
+}
+
 .link-item:hover {
 	background-color: var(--main-fg-color);
 	color: var(--main-bg-color);
 	cursor:pointer;
-}
-
-.link-item {
-	border-radius: 0.5vh;
-	font-weight: bold;
 }
 
 a { 

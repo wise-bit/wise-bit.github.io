@@ -1,4 +1,4 @@
-var darkMode = true;
+var darkMode = false;
 
 jQuery(document).ready(function($) {
     $(".clickable-content").click(function() {
