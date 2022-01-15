@@ -23,11 +23,11 @@ body {
     animation-fill-mode: forwards;
     transition: background 0.3s;
 
-    cursor: url("res/cursor.png") 16 16, default;
+    cursor: url("res/cursor.png") 12 12, default;
 }
 
 a:hover, img:hover, button:hover {
-    cursor: url("res/cursor.png") 16 16, default;
+    cursor: url("res/cursor.png") 12 12, default;
 }
 
 @keyframes fadeInAnimation {
