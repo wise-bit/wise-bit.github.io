@@ -25,3 +25,5 @@ jQuery(document).ready(function($) {
 $(document).ready(function(){
 	$('[data-toggle="tooltip"]').tooltip();
 });
+
+// document.addEventListener('contextmenu', event => event.preventDefault());
