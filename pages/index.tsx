@@ -1,7 +1,8 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import type { NextPage } from "next";
+import Head from "next/head";
 // import Image from "next/image";
-import styles from '../styles/Home.module.css';
+import styles from "../styles/Home.module.css";
+import Intro from "../components/Intro";
 
 const Home: NextPage = () => {
   return (
@@ -13,11 +14,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Hi I'm <span className={'highlight'}>&nbsp;Sat&nbsp;</span> !
-        </h1>
-
-        <h3>v3 is still under development ;-;</h3>
+        <Intro username="Sat" />
       </main>
     </div>
   );
