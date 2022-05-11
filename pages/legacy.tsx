@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Deprecated() {
+export default function Legacy() {
   return (
     <>
       <div
@@ -8,7 +8,7 @@ export default function Deprecated() {
           position: "relative",
           minHeight: "100%",
           margin: "auto",
-          width: "40%",
+          width: "70%",
         }}
       >
         <div className="vertical-center">

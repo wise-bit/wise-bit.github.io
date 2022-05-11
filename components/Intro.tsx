@@ -17,7 +17,7 @@ const Intro: NextPage<Props> = (props) => {
       <h3>Computer Science and Mathematics Undergrad Student</h3>
       <h3 style={{ color: "#777777", marginTop: "100px" }}>
         <span className={"highlight2"}>v3</span> is still under development,{" "}
-        <Link href="/deprecated">
+        <Link href="/legacy">
           <span className={"highlight2 clickable"}>check out v2</span>
         </Link>
       </h3>
