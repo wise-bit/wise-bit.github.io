@@ -8,11 +8,8 @@
 body {
   background-color: var(--main-bg-color);
   color: var(--main-fg-color);
-  margin: 0 0 1vh;
   /* bottom = footer height */
-  padding: 1vh;
   font-family: monaco, Consolas, Lucida Console, monospace;
-
   animation: fadeInAnimation ease 1.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;

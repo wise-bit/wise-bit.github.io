@@ -5,6 +5,8 @@
   color: #ffffff;
   padding-inline: 20px;
   border-radius: 10px;
+  margin: 0px;
+  text-align: center;
 }
 
 .highlight2 {
@@ -14,6 +16,7 @@
   color: #ffffff;
   padding-inline: 8px;
   border-radius: 5px;
+  text-align: center;
 }
 
 .clickable {
