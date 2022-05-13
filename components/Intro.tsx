@@ -15,7 +15,7 @@ const Intro: NextPage<Props> = (props) => {
         Hi I&apos;m <span className={'highlight'}>{username}</span> !
       </h1>
       <h3 style={{ textAlign: 'center', marginBottom: '50px' }}>
-        Computer Science and Mathematics Undergrad Student
+        Computer Science and Mathematics Undergrad Student at uOttawa
       </h3>
 
       <div style={{ display: 'flex', flexDirection: 'row' }}>
