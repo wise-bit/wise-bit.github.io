@@ -9,7 +9,7 @@ body {
   background-color: var(--main-bg-color);
   color: var(--main-fg-color);
   /* bottom = footer height */
-  font-family: monaco, Consolas, Lucida Console, monospace;
+  font-family: monospace, monaco, Consolas, Lucida Console, monospace;
   animation: fadeInAnimation ease 1.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;

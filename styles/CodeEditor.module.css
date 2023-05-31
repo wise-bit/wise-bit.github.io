@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+.code-editor {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.toggle-button {
+  border: none;
+  background: none;
+  font-size: 1.5em;
+  margin-right: 8px;
+  margin-bottom: 0px;
+  padding: 0;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.sign-button {
+  position: absolute;
+  background-color: bisque;
+  left: -30px;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8em;
+  line-height: inherit;
+  font-family: inherit;
+  border: solid black 2px;
+  border-radius: 4px;
+  padding-inline: 5px;
+  font-weight: normal;
+
+}
+
+/* .toggle-button.expanded {
+  transform: rotate(45deg);
+} */
+
+.code-block {
+  transition: opacity 0.4s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  padding: 0px;
+  border-radius: 4px;
+  margin-top: 3px;
+  margin-bottom: 10px;
+  font-family: monospace;
+  font-size: 1.5em;
+  line-height: 25px;
+}
+
+.code-block.expanded {
+  opacity: 1;
+  height: auto;
+}
+
+/* .toggle-button:before {
+  content: '+';
+  position: absolute;
+  left: -1.5vw;
+  top: 0;
+} */

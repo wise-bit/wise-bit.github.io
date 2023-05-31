@@ -1,0 +1,41 @@
+b {
+  color: #ecf0f1;
+  background: #e74c3c;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  font-size: 1.5em;
+  position: relative;
+}
+
+b span {
+  position: absolute;
+  transition: 300ms;
+  background: white;
+  border-radius: 2px;
+}
+
+/* Create the "+" shape by positioning the spans absolutely */
+b span:first-child {
+  top: 25%;
+  bottom: 25%;
+  width: 10%;
+  left: 45%;
+}
+
+b span:last-child {
+  left: 25%;
+  right: 25%;
+  height: 10%;
+  top: 45%;
+}
+
+/* Morph the shape when the b is hovered over */
+b:hover span {
+  transform: rotate(90deg);
+}
+
+b:hover span:last-child {
+  left: 50%;
+  right: 50%;
+}
