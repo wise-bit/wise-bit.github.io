@@ -1,0 +1,48 @@
+const resume = () => {
+    const download = "/resume.pdf";//%https://www.satrajit.ca/files/CV.pdf
+}
+// ---
+const whois = (sat) => {
+    const summary = "I like to build silly things";
+ 
+    const long_description = `
+        AI Back-End Developer @ Intact //
+        CS and Math @ uOttawa
+    `;
+ 
+    // email
+    return "satrajit314@gmail.com";//%mailto:satrajit314@gmail.com
+}
+// ---
+const experience = () => {
+    // Intact Financial Corporation
+    const summer_2023 = "AI Backend Developer";
+    const fall_2022 = "AI Backend Developer";
+ 
+    // RBC (Royal Bank of Canada) 
+    const winter_2022 = "SRE Software Developer";
+ 
+    // uOttawa Engineering Outreach
+    const summer_2021 = "Full-stack Developer";
+    const summer_2020 = "Full-stack Developer";
+ 
+    // linkedin
+    return "linkedin.com/in/satrajit-c";//%https://www.linkedin.com/in/satrajit-c/
+}
+// ---
+const projects = () => {
+    // https://github.com/wise-bit/worry-note
+    const worry_note = "notes.satrajit.ca";//%https://notes.satrajit.ca/
+ 
+    // https://github.com/wise-bit/linepaste
+    const line_paste = "paste.satrajit.ca";//%https://paste.satrajit.ca
+ 
+    // github
+    return "github.com/wise-bit";//%https://github.com/wise-bit
+}
+// ---
+const education = () => {
+    // TODO: Complete by Winter 2024
+    const university = "University of Ottawa";
+    const program = "CS and Math Dual Major";
+}
