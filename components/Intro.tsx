@@ -38,7 +38,7 @@ const Intro: NextPage<Props> = (props) => {
 
   return (
     <>
-      <div style={{ paddingBottom: '50px' }}>
+      <div className={styles.mainpage} style={{ paddingBottom: '50px' }}>
         <div className={styles.title}>
           <pre>{nameContents}</pre>
         </div>
