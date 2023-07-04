@@ -34,7 +34,7 @@ const Intro: NextPage<Props> = (props) => {
     fetchFileContents();
   }, []);
 
-  // More work needs to be done here
+  const portfolio_components = fileContents.split(/\r?\n\/\/ ---\r?\n/);
 
   return (
     <>
@@ -42,8 +42,9 @@ const Intro: NextPage<Props> = (props) => {
         <pre>{nameContents}</pre>
       </div>
       <div>
-        <CodeEditor displayText={fileContents} nest={0} />
-        <CodeEditor displayText={fileContents} nest={0} />
+        {portfolio_components.map((component) => {
+          return <CodeEditor displayText={component} nest={0} />;
+        })}
       </div>
     </>
   );

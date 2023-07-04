@@ -13,7 +13,7 @@
   font-size: 1.5em;
   margin-right: 8px;
   margin-bottom: 0px;
-  padding: 0;
+  padding: 0px;
   cursor: pointer;
   transition: 0.3s;
   font-family: monospace;
@@ -22,19 +22,18 @@
 
 .sign-button {
   position: absolute;
-  background-color: bisque;
+  background-color: #333;
+  color: white;
   left: -30px;
   margin: 0;
-  border: none;
   cursor: pointer;
   font-size: 0.8em;
   line-height: inherit;
   font-family: inherit;
-  border: solid black 2px;
+  border: solid black 3px;
   border-radius: 4px;
   padding-inline: 5px;
   font-weight: normal;
-
 }
 
 /* .toggle-button.expanded {
@@ -42,7 +41,7 @@
 } */
 
 .code-block {
-  transition: opacity 0.4s ease-out;
+  transition: opacity 0.6s ease-out;
   opacity: 0;
   height: 0;
   overflow: hidden;
