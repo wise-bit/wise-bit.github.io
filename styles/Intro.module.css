@@ -10,8 +10,8 @@
 
 @media screen and (max-width: 767px) {
   .mainpage {
-    margin: -300px;
-    margin-top: -400px;
-    scale: 0.5;
+    margin-top: -200px;
+    margin-inline: -200px;
+    scale: 0.45;
   }
 }
