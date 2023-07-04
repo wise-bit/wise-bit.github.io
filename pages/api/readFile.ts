@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 export default function handler(_req: any, res: any) {
-  const configDirectory = path.resolve(process.cwd() + '\\res');
+  const configDirectory = path.resolve(process.cwd(), 'res');
   try {
     const fileContents = fs.readFileSync(
       path.join(configDirectory, 'self.txt'),
