@@ -50,10 +50,10 @@ const CodeEditor: NextPage<Props> = (props) => {
             expanded ? styles.expanded : ''
           }`}
         >
-          {finalDisplayText.split(/\r?\n/).map((line) => {
+          {finalDisplayText.split(/\r?\n/).map((line, index) => {
             if (line.trim().startsWith('//')) {
               return (
-                <div style={{ color: '#666' }}>
+                <div key={index} style={{ color: '#666' }}>
                   <code>{line}</code>
                 </div>
               );
@@ -62,21 +62,23 @@ const CodeEditor: NextPage<Props> = (props) => {
             let parts = line.split('//%');
             if (parts.length > 1) {
               return (
-                <a href={parts[1]} rel='noopener noreferrer' target='_blank'>
-                  <div
-                    style={{
-                      color: '#5d9dc2',
-                      cursor: 'pointer',
-                    }}
-                  >
-                    <code>{parts[0]}</code>
-                  </div>
-                </a>
+                <div key={index}>
+                  <a href={parts[1]} rel='noopener noreferrer' target='_blank'>
+                    <div
+                      style={{
+                        color: '#5d9dc2',
+                        cursor: 'pointer',
+                      }}
+                    >
+                      <code>{parts[0]}</code>
+                    </div>
+                  </a>
+                </div>
               );
             }
 
             return (
-              <div style={{ color: '#CCC' }}>
+              <div key={index} style={{ color: '#CCC' }}>
                 <code>{line}</code>
               </div>
             );
