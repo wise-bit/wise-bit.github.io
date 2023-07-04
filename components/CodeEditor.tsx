@@ -43,7 +43,7 @@ const CodeEditor: NextPage<Props> = (props) => {
             {firstLineSplit[1]}
           </span>
           {' ' + firstLineSplit.slice(2, firstLineSplit.length - 1).join(' ')}
-          {expanded ? '' : '... }'}
+          {' { ' + (expanded ? '' : '... }')}
         </div>
         <pre
           className={`${styles['code-block']} ${
