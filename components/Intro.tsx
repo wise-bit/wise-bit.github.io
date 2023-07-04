@@ -38,13 +38,15 @@ const Intro: NextPage<Props> = (props) => {
 
   return (
     <>
-      <div className={styles.title}>
-        <pre>{nameContents}</pre>
-      </div>
-      <div>
-        {portfolio_components.map((component, index) => {
-          return <CodeEditor key={index} displayText={component} nest={0} />;
-        })}
+      <div style={{ paddingBottom: '50px' }}>
+        <div className={styles.title}>
+          <pre>{nameContents}</pre>
+        </div>
+        <div>
+          {portfolio_components.map((component, index) => {
+            return <CodeEditor key={index} displayText={component} nest={0} />;
+          })}
+        </div>
       </div>
     </>
   );
