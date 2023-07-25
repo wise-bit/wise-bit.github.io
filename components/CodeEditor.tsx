@@ -63,7 +63,7 @@ const CodeEditor: NextPage<Props> = (props) => {
             if (parts.length > 1) {
               return (
                 <div key={index}>
-                  <a href={parts[1]} rel='noopener noreferrer' target='_blank'>
+                  <a href={parts[1]} rel='noopener noreferrer'>
                     <div
                       style={{
                         color: '#5d9dc2',

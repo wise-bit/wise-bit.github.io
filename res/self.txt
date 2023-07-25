@@ -1,17 +1,21 @@
 const resume = () => {
-    const download = "/resume.pdf";//%https://www.satrajit.ca/files/CV.pdf
+    // download
+    return "/resume.pdf";//%https://www.satrajit.ca/files/satrajit-resume.pdf
 }
 // ---
 const whois = (sat) => {
-    const summary = "I like to build silly things";
+    const summary = "I like to build groovy things.";
  
     const long_description = `
         AI Back-End Developer @ Intact //
-        CS and Math @ uOttawa
+        CS and Math @ uOttawa // 
+        Competitions Coordinator @ Hack the Hill
     `;
  
     // email
     return "satrajit314@gmail.com";//%mailto:satrajit314@gmail.com
+ 
+    // discord: wisebit
 }
 // ---
 const experience = () => {
