@@ -1,6 +1,6 @@
 # Privacy Policy for "lmao-bot" Discord Bot
 
-Last updated: 19/08/2023
+*Last updated: 19/08/2023*
 
 This Privacy Policy outlines how the "lmao-bot" Discord bot ("we," "our," or "us") collects, uses, and protects user data. By using the lmao-bot, you agree to the terms outlined in this policy.
 
