@@ -20,7 +20,7 @@ We reserve the right to ban servers from using the lmao-bot if any abuse or misu
 
 If you have any concerns or questions regarding your data or the usage of the lmao-bot, you can contact the developer using the following methods:
 
-- Email: satrajit2014@gmail.com
+- Email: lmaobot314@gmail.com
 - Discord: @wisebit
 - Support server: https://discord.gg/SAMjGcfRyf
 
