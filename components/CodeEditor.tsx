@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NextPage } from 'next';
+
 import styles from '../styles/CodeEditor.module.css';
 // import ExpandButton from './ExpandButton';
 
@@ -10,12 +11,12 @@ import styles from '../styles/CodeEditor.module.css';
 interface Props {
   displayText: string;
   nest: number;
+  resumeLink: string;
 }
 
 const CodeEditor: NextPage<Props> = (props) => {
   const [expanded, setExpanded] = useState(true);
-
-  const { displayText } = props;
+  const { displayText, resumeLink } = props;
 
   const text: string[] = displayText.split('\n');
   const firstLine = text.shift() || 'const undefined;';
@@ -63,7 +64,10 @@ const CodeEditor: NextPage<Props> = (props) => {
             if (parts.length > 1) {
               return (
                 <div key={index}>
-                  <a href={parts[1]} rel='noopener noreferrer'>
+                  <a
+                    href={parts[1] === 'link-resume' ? resumeLink : parts[1]}
+                    rel='noopener noreferrer'
+                  >
                     <div
                       style={{
                         color: '#5d9dc2',

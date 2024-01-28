@@ -11,6 +11,7 @@ const Intro: NextPage<Props> = (props) => {
   // const { username } = props;
   const [fileContents, setFileContents] = useState('');
   const [nameContents, setNameContents] = useState('');
+  const [resumeLink, setResumeLink] = useState('');
 
   useEffect(() => {
     const fetchFileContents = async () => {
@@ -29,6 +30,14 @@ const Intro: NextPage<Props> = (props) => {
       } catch (error) {
         console.error('Error fetching file:', error);
       }
+
+      try {
+        const resumeResponse = await fetch('/api/generateResume');
+        const resumeData = await resumeResponse.json();
+        setResumeLink(resumeData.url);
+      } catch (error) {
+        console.error('Error fetching S3 URL:', error);
+      }
     };
 
     fetchFileContents();
@@ -44,7 +53,14 @@ const Intro: NextPage<Props> = (props) => {
         </div>
         <div>
           {portfolio_components.map((component, index) => {
-            return <CodeEditor key={index} displayText={component} nest={0} />;
+            return (
+              <CodeEditor
+                key={index}
+                displayText={component}
+                nest={0}
+                resumeLink={resumeLink}
+              />
+            );
           })}
         </div>
       </div>

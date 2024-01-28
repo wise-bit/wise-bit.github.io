@@ -1,6 +1,6 @@
 const resume = () => {
     // download
-    return "/resume.pdf";//%https://www.satrajit.ca/files/satrajit-resume.pdf
+    return "/resume.pdf";//%link-resume
 }
 // ---
 const whois = (sat) => {
@@ -19,6 +19,9 @@ const whois = (sat) => {
 }
 // ---
 const experience = () => {
+    // KPMG
+    const fall_2023 = "Full-stack Developer";
+
     // Intact Financial Corporation
     const summer_2023 = "AI Backend Developer";
     const fall_2022 = "AI Backend Developer";
