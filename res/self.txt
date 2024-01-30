@@ -15,6 +15,9 @@ const whois = (sat) => {
     // email
     return "satrajit314@gmail.com";//%mailto:satrajit314@gmail.com
  
+    // book a meeting
+    return "calendly.com/satrajit-c/30min";//%https://calendly.com/satrajit-c/30min
+ 
     // discord: wisebit
 }
 // ---
