@@ -22,9 +22,12 @@ const whois = (sat) => {
 }
 // ---
 const experience = () => {
+    // IntactLab
+    const present = "AI Developer";
+ 
     // KPMG
     const fall_2023 = "Full-stack Developer";
-
+ 
     // Intact Financial Corporation
     const summer_2023 = "AI Backend Developer";
     const fall_2022 = "AI Backend Developer";
@@ -44,7 +47,7 @@ const projects = () => {
     // https://github.com/wise-bit/worry-note
     const worry_note = "notes.satrajit.ca";//%https://notes.satrajit.ca/
  
-    // https://github.com/wise-bit/linepaste
+    // http://github.com/wise-bit/linepaste
     const line_paste = "paste.satrajit.ca";//%https://paste.satrajit.ca
  
     // github
@@ -52,7 +55,16 @@ const projects = () => {
 }
 // ---
 const education = () => {
-    // TODO: Complete by Winter 2024
-    const university = "University of Ottawa";
-    const program = "CS and Math Dual Major";
+    const university = {
+        name: "University of Ottawa",
+        status: "B.Sc. - Summa Cum Laude",
+        program: "CS and Math Dual Major",
+        clubs: [
+            "Hack the Hill",
+            "Computer Science Student Association",
+            "uOttaHack",
+            "Computer Science Club",
+            "English Debating Society"
+        ]
+    };
 }
