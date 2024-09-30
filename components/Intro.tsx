@@ -4,6 +4,7 @@ import CodeEditor from './CodeEditor';
 import { useEffect, useState } from 'react';
 import HeaderText from './HeaderText';
 import Terminal from './Terminal';
+import Dino from './Dino';
 
 interface Props {
   username: string;
@@ -50,7 +51,7 @@ const Intro: NextPage<Props> = (props) => {
 
   return (
     <>
-      <div className={styles.mainpage} style={{ paddingBottom: '50px' }}>
+      <div className={styles.mainpage}>
         {/* <div className={styles.title}>
           <pre>{nameContents}</pre>
         </div> */}
@@ -72,6 +73,9 @@ const Intro: NextPage<Props> = (props) => {
               />
             );
           })}
+        </div>
+        <div>
+          <Dino />
         </div>
       </div>
     </>

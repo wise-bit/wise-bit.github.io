@@ -1,0 +1,107 @@
+.gameContainer {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: rgb(180, 255, 180);
+  background-image: repeating-linear-gradient(to right,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.2) 10%,
+      transparent 10%,
+      transparent 20%);
+  background-size: 200% 100%;
+  animation: wind 4s linear infinite;
+}
+
+/* Add the wind-moving effect */
+@keyframes wind {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.dinosaur {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 5px #333 solid;
+  border-radius: 10px;
+  animation: run 0.3s steps(2) infinite;
+  font-size: 12px;
+  color: black;
+  font-family: monospace;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dinosaur.jump {
+  animation: none;
+  animation: jump 0.5s ease-out;
+}
+
+@keyframes run {
+  0% {
+    background-position: 0;
+  }
+
+  100% {
+    background-position: -80px;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+
+  50% {
+    bottom: 70px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+.tree {
+  position: absolute;
+  bottom: 0;
+  width: 20px;
+  height: 10px;
+  background-color: #8B4513;
+  /* Trunk color */
+  border-radius: 2px;
+}
+
+.tree::before {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: -10px;
+  width: 40px;
+  height: 30px;
+  background-color: #086b08;
+  border-radius: 30%;
+}
+
+.tree::after {
+  content: '';
+  position: absolute;
+  bottom: 30px;
+  left: -5px;
+  width: 30px;
+  height: 10px;
+  background-color: #034f24;
+  /* Darker foliage for layering */
+  border-radius: 30%;
+}

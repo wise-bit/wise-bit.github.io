@@ -7,6 +7,7 @@ body {
   cursor: url("../public/cursor.png") 12 12, default;
   overflow-wrap: break-word;
   color: #eeeeee !important;
+  background-color: #000 !important;
 }
 
 a, a:hover {

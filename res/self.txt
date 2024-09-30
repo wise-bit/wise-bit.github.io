@@ -21,13 +21,13 @@ const experience = () => {
   const present = "AI Developer";
  
   // KPMG
-  const fall_2023 = "Full-stack Developer";
+  const f_2023 = "Full-stack Developer";
   // Intact Financial Corporation
-  const summer_2023_fall_2022 = "AI Backend Developer";
+  const s_2023_f_2022 = "AI Backend Developer";
   // RBC (Royal Bank of Canada) 
-  const winter_2022 = "SRE Software Developer";
+  const w_2022 = "SRE Software Developer";
   // uOttawa Engineering Outreach
-  const summer_2020_2021 = "Full-stack Developer";
+  const s_2020_s_2021 = "Full-stack Developer";
  
   // linkedin
   return "linkedin.com/in/satrajit-c";//%https://www.linkedin.com/in/satrajit-c/

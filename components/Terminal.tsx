@@ -1,10 +1,18 @@
 import React, { useState, KeyboardEvent } from 'react';
 
+const getDate = () => {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = (today.getMonth() + 1).toString().padStart(2, "0");
+  const date = today.getDate().toString().padStart(2, "0");
+  return `${year}-${month}-${date}`;
+}
+
 const Terminal: React.FC = () => {
   const [input, setInput] = useState<string>('');
   const [logs, setLogs] = useState<string[]>([
     `hi i'm a functional terminal :)`,
-    `---`,
+    getDate(),
   ]);
 
   const handleCommand = (event: KeyboardEvent<HTMLInputElement>) => {
@@ -41,6 +49,7 @@ const Terminal: React.FC = () => {
         <span style={promptStyle}>user@terminal:~$</span>
         <input
           type='text'
+          placeholder='type a command or "help"...'
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={handleCommand}
@@ -88,7 +97,7 @@ const inputStyle: React.CSSProperties = {
   fontWeight: 'bold',
   border: 'none',
   outline: 'none',
-  width: '100%',
+  width: '90%',
   paddingLeft: '0px',
   fontSize: '16px',
 };
