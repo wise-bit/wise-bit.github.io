@@ -17,6 +17,11 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: inherit;
+  font-weight: bold;
+}
+
 * {
   box-sizing: border-box;
 }

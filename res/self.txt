@@ -3,8 +3,8 @@ const whois = (sat) => {
  
   const long_description = `
     AI backend developer @ Intact //
-    building mechanical mice & keyboards //
-    creating a fantasy bank for dungeons & dragons
+    Building mechanical mice & keyboards //
+    Creating a fantasy bank for dungeons & dragons
   `;
  
   // email

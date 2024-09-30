@@ -54,14 +54,18 @@ const Intro: NextPage<Props> = (props) => {
         </div> */}
         <div className={styles.title}>
           <p>
+            {`
             hi i'm sat (the govt. calls me satrajit chatterjee, you might find
-            me as `wise(-)bit` on the internet) i'm a developer, working on AI
-            and computational genomics projects.
+            me as \`wise(-)bit\` on the internet) i'm a developer, working on finance 
+            simulation, AI and computational genomics projects.
+            `}
           </p>
-          <p>//</p>
+          <p>{'//'}</p>
           <p>
-            this text mostly exists because SEO can't process my fancy custom
-            interactive code layout ;)
+            {`
+            this text mostly exists because SEO can't process my fancy
+            custom interactive code layout ;)
+            `}
           </p>
           <br />
           <hr />
