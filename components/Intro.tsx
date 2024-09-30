@@ -69,6 +69,7 @@ const Intro: NextPage<Props> = (props) => {
           </p>
           <br />
           <hr />
+          <br />
         </div>
         <div>
           {portfolio_components.map((component, index) => {

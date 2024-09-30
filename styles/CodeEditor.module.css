@@ -19,14 +19,15 @@
   transition: 0.3s;
   font-family: monospace;
   font-weight: bold;
+  margin-left: 30px;
 }
 
 .sign-button {
   position: absolute;
   background-color: #000;
   color: white;
-  left: -30px;
-  margin: 0;
+  left: 0px;
+  /* margin: 0; */
   cursor: pointer;
   /* font-size: 0.8em; */
   line-height: inherit;
@@ -55,6 +56,7 @@
   /* font-size: 1.5em; */
   font-size: 16px;
   line-height: 20px;
+  margin-left: 30px;
 }
 
 .code-block.expanded {

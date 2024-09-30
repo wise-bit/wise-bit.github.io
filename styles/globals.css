@@ -6,6 +6,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   cursor: url("../public/cursor.png") 12 12, default;
   overflow-wrap: break-word;
+  color: #eeeeee !important;
 }
 
 a, a:hover {
