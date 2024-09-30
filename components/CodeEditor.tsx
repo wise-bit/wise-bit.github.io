@@ -12,11 +12,12 @@ interface Props {
   displayText: string;
   nest: number;
   resumeLink: string;
+  defaultExpand: boolean;
 }
 
 const CodeEditor: NextPage<Props> = (props) => {
-  const [expanded, setExpanded] = useState(true);
-  const { displayText, resumeLink } = props;
+  const { displayText, resumeLink, defaultExpand } = props;
+  const [expanded, setExpanded] = useState(defaultExpand);
 
   const text: string[] = displayText.split('\n');
   const firstLine = text.shift() || 'const undefined;';
@@ -54,7 +55,7 @@ const CodeEditor: NextPage<Props> = (props) => {
           {finalDisplayText.split(/\r?\n/).map((line, index) => {
             if (line.trim().startsWith('//')) {
               return (
-                <div key={index} style={{ color: '#666' }}>
+                <div key={index} style={{ color: '#999' }}>
                   <code>{line}</code>
                 </div>
               );
@@ -82,7 +83,7 @@ const CodeEditor: NextPage<Props> = (props) => {
             }
 
             return (
-              <div key={index} style={{ color: '#CCC' }}>
+              <div key={index} style={{ color: '#DDD' }}>
                 <code>{line}</code>
               </div>
             );

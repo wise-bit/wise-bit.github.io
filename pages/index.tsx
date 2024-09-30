@@ -10,7 +10,7 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <Head>
         <title>Satrajit Chatterjee</title>
-        <meta name='description' content='By Satrajit Chatterjee' />
+        <meta name='description' content='Satrajit Chatterjee' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
 

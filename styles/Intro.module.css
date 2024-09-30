@@ -3,9 +3,11 @@
   line-height: 1.15;
   font-weight: bold;
   font-family: monospace;
-  font-size: 1.5em !important;
+  /* font-size: 1.5em !important; */
+  font-size: 16px;
   margin-top: 40px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  max-width: 500px;
 }
 
 @media screen and (max-width: 767px) {
@@ -13,6 +15,6 @@
     /* margin-top: -200px;
     margin-inline: -200px; */
     /* scale: 0.45; */
-    font-size: 9px;
+    /* font-size: 9px; */
   }
 }

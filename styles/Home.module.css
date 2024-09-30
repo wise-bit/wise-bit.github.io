@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  background-color: #111 !important;
+  background-color: #000 !important;
 }
 
 .main {
@@ -25,7 +25,7 @@
   align-items: left;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: #eeeeee !important;
-  background-color: #111 !important;
+  background-color: #000 !important;
 }
 
 .footer {

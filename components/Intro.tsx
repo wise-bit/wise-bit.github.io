@@ -10,7 +10,7 @@ interface Props {
 const Intro: NextPage<Props> = (props) => {
   // const { username } = props;
   const [fileContents, setFileContents] = useState('');
-  const [nameContents, setNameContents] = useState('');
+  // const [nameContents, setNameContents] = useState('');
   const [resumeLink, setResumeLink] = useState('');
 
   useEffect(() => {
@@ -23,18 +23,19 @@ const Intro: NextPage<Props> = (props) => {
         console.error('Error fetching file:', error);
       }
 
-      try {
-        const nameResponse = await fetch('/api/readName');
-        const nameData = await nameResponse.json();
-        setNameContents(nameData.fileContents);
-      } catch (error) {
-        console.error('Error fetching file:', error);
-      }
+      // try {
+      //   const nameResponse = await fetch('/api/readName');
+      //   const nameData = await nameResponse.json();
+      //   setNameContents(nameData.fileContents);
+      // } catch (error) {
+      //   console.error('Error fetching file:', error);
+      // }
 
       try {
-        const resumeResponse = await fetch('/api/generateResume');
-        const resumeData = await resumeResponse.json();
-        setResumeLink(resumeData.url);
+        // const resumeResponse = await fetch('/api/generateResume');
+        // const resumeData = await resumeResponse.json();
+        // setResumeLink(resumeData.url);
+        setResumeLink('/files/satrajit-resume.pdf');
       } catch (error) {
         console.error('Error fetching S3 URL:', error);
       }
@@ -48,8 +49,22 @@ const Intro: NextPage<Props> = (props) => {
   return (
     <>
       <div className={styles.mainpage} style={{ paddingBottom: '50px' }}>
-        <div className={styles.title}>
+        {/* <div className={styles.title}>
           <pre>{nameContents}</pre>
+        </div> */}
+        <div className={styles.title}>
+          <p>
+            hi i'm sat (the govt. calls me satrajit chatterjee, you might find
+            me as `wise(-)bit` on the internet) i'm a developer, working on AI
+            and computational genomics projects.
+          </p>
+          <p>//</p>
+          <p>
+            this text mostly exists because SEO can't process my fancy custom
+            interactive code layout ;)
+          </p>
+          <br />
+          <hr />
         </div>
         <div>
           {portfolio_components.map((component, index) => {
@@ -59,6 +74,7 @@ const Intro: NextPage<Props> = (props) => {
                 displayText={component}
                 nest={0}
                 resumeLink={resumeLink}
+                defaultExpand={index == 0}
               />
             );
           })}

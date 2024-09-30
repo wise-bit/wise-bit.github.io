@@ -1,70 +1,68 @@
-const resume = () => {
-    // download
-    return "/resume.pdf";//%link-resume
-}
-// ---
 const whois = (sat) => {
-    const summary = "I like to build groovy things.";
+  const summary = "i like to build cool code things";
  
-    const long_description = `
-        AI Back-End Developer @ Intact //
-        CS and Math @ uOttawa // 
-        Competitions Coordinator @ Hack the Hill
-    `;
+  const long_description = `
+    AI backend developer @ Intact //
+    building mechanical mice & keyboards //
+    creating a fantasy bank for dungeons & dragons
+  `;
  
-    // email
-    return "satrajit314@gmail.com";//%mailto:satrajit314@gmail.com
+  // email
+  return "satrajit314@gmail.com";//%mailto:satrajit314@gmail.com
  
-    // book a meeting
-    return "calendly.com/satrajit-c/30min";//%https://calendly.com/satrajit-c/30min
+  // book a meeting
+  return "calendly.com/satrajit-c/30min";//%https://calendly.com/satrajit-c/30min
  
-    // discord: wisebit
+  // discord: wisebit
 }
 // ---
 const experience = () => {
-    // IntactLab
-    const present = "AI Developer";
+  // Intact Data Lab
+  const present = "AI Developer";
  
-    // KPMG
-    const fall_2023 = "Full-stack Developer";
+  // KPMG
+  const fall_2023 = "Full-stack Developer";
+  // Intact Financial Corporation
+  const summer_2023_fall_2022 = "AI Backend Developer";
+  // RBC (Royal Bank of Canada) 
+  const winter_2022 = "SRE Software Developer";
+  // uOttawa Engineering Outreach
+  const summer_2020_2021 = "Full-stack Developer";
  
-    // Intact Financial Corporation
-    const summer_2023 = "AI Backend Developer";
-    const fall_2022 = "AI Backend Developer";
- 
-    // RBC (Royal Bank of Canada) 
-    const winter_2022 = "SRE Software Developer";
- 
-    // uOttawa Engineering Outreach
-    const summer_2021 = "Full-stack Developer";
-    const summer_2020 = "Full-stack Developer";
- 
-    // linkedin
-    return "linkedin.com/in/satrajit-c";//%https://www.linkedin.com/in/satrajit-c/
+  // linkedin
+  return "linkedin.com/in/satrajit-c";//%https://www.linkedin.com/in/satrajit-c/
 }
 // ---
 const projects = () => {
-    // https://github.com/wise-bit/worry-note
-    const worry_note = "notes.satrajit.ca";//%https://notes.satrajit.ca/
+  // https://github.com/wise-bit/fantasy-bank
+  const fantasy_bank = "bank.satrajit.ca";//%https://bank.satrajit.ca/
  
-    // http://github.com/wise-bit/linepaste
-    const line_paste = "paste.satrajit.ca";//%https://paste.satrajit.ca
+  // https://github.com/wise-bit/worry-note
+  const worry_note = "notes.satrajit.ca";//%https://notes.satrajit.ca/
  
-    // github
-    return "github.com/wise-bit";//%https://github.com/wise-bit
+  // http://github.com/wise-bit/linepaste
+  const line_paste = "paste.satrajit.ca";//%https://paste.satrajit.ca
+ 
+  // github
+  return "github.com/wise-bit";//%https://github.com/wise-bit
 }
 // ---
 const education = () => {
-    const university = {
-        name: "University of Ottawa",
-        status: "B.Sc. - Summa Cum Laude",
-        program: "CS and Math Dual Major",
-        clubs: [
-            "Hack the Hill",
-            "Computer Science Student Association",
-            "uOttaHack",
-            "Computer Science Club",
-            "English Debating Society"
-        ]
-    };
+  const undergrad = {
+    name: "University of Ottawa",
+    status: "B.Sc. - Summa Cum Laude",
+    program: "CS and Math Dual Major",
+    clubs: [
+      "Hack the Hill",
+      "Computer Science Student Association",
+      "uOttaHack",
+      "Computer Science Club",
+      "English Debating Society"
+    ]
+  };
+}
+// ---
+const resume = () => {
+  // download
+  return "/resume.pdf";//%link-resume
 }
