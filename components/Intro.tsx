@@ -2,6 +2,8 @@ import { NextPage } from 'next';
 import styles from '../styles/Intro.module.css';
 import CodeEditor from './CodeEditor';
 import { useEffect, useState } from 'react';
+import HeaderText from './HeaderText';
+import Terminal from './Terminal';
 
 interface Props {
   username: string;
@@ -53,23 +55,10 @@ const Intro: NextPage<Props> = (props) => {
           <pre>{nameContents}</pre>
         </div> */}
         <div className={styles.title}>
-          <p>
-            {`
-            hi i'm sat (the govt. calls me satrajit chatterjee, you might find
-            me as \`wise(-)bit\` on the internet) i'm a developer, working on finance 
-            simulation, AI and computational genomics projects.
-            `}
-          </p>
-          <p>{'//'}</p>
-          <p>
-            {`
-            this text mostly exists because SEO can't process my fancy
-            custom interactive code layout ;)
-            `}
-          </p>
-          <br />
-          <hr />
-          <br />
+          <HeaderText />
+        </div>
+        <div>
+          <Terminal />
         </div>
         <div>
           {portfolio_components.map((component, index) => {
