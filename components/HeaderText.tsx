@@ -7,7 +7,7 @@ const HeaderText: NextPage<Props> = (props) => {
     <>
       <p>
         {`
-            hi i'm sat (the govt. calls me satrajit chatterjee, you might find
+            hi i'm sat (the govt calls me satrajit chatterjee, you might find
             me as \`wise(-)bit\` on the internet) i'm a developer, working on finance 
             simulation, AI and computational genomics projects.
             `}
