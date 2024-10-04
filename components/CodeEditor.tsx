@@ -72,7 +72,7 @@ const CodeEditor: NextPage<Props> = (props) => {
                     <div
                       style={{
                         color: '#5d9dc2',
-                        cursor: 'pointer',
+                        // cursor: 'pointer',
                       }}
                     >
                       <code>{parts[0]}</code>

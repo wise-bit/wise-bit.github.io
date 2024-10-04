@@ -55,12 +55,18 @@ const Intro: NextPage<Props> = (props) => {
         {/* <div className={styles.title}>
           <pre>{nameContents}</pre>
         </div> */}
+
+        {/* Text header */}
         <div className={styles.title}>
           <HeaderText />
         </div>
+
+        {/* Terminal */}
         <div>
           <Terminal />
         </div>
+
+        {/* Code Editor */}
         <div>
           {portfolio_components.map((component, index) => {
             return (
@@ -74,6 +80,8 @@ const Intro: NextPage<Props> = (props) => {
             );
           })}
         </div>
+
+        {/* Dino */}
         <div>
           <Dino />
         </div>
