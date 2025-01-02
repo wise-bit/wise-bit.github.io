@@ -40,8 +40,8 @@ const projects = () => {
   // https://github.com/wise-bit/worry-note
   const worry_note = "notes.satrajit.ca";//%https://notes.satrajit.ca/
  
-  // http://github.com/wise-bit/linepaste
-  const line_paste = "paste.satrajit.ca";//%https://paste.satrajit.ca
+  // http://github.com/wise-bit/trials
+  const untrials = "trials.satrajit.ca";//%https://trials.satrajit.ca
  
   // github
   return "github.com/wise-bit";//%https://github.com/wise-bit
