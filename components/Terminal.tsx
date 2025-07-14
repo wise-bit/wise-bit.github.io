@@ -24,25 +24,52 @@ const Terminal: React.FC = () => {
         case 'help':
           setLogs((prevLogs) => [
             ...prevLogs,
-            'Available commands: help, clear',
+            'Available commands: help, clear, date, time',
           ]);
           break;
+
         case 'clear':
           setLogs([]);
           break;
+        
+        case 'date':
+          setLogs((prevLogs) => [...prevLogs, getDate()]);
+          break;
+        
+        case 'time':
+          setLogs((prevLogs) => [...prevLogs, new Date().toLocaleTimeString()]);
+          break;
+
         default:
-          setLogs((prevLogs) => [...prevLogs, 'Command not found']);
+          setLogs((prevLogs) => [...prevLogs, 'ERROR: command not found']);
       }
 
       setInput(''); // clear input after command execution
     }
   };
 
+  const getCommandColor = (command: string) => {
+    if (command.startsWith('ERROR')) {
+      return '#c44f4fff';
+    } else if (command.startsWith('>')) {
+      return '#3f803fff';
+    }
+    return '#6ad46a';
+  };
+
   return (
     <div style={terminalStyle}>
       <div style={logStyle}>
         {logs.map((log, index) => (
-          <div key={index}>{log}</div>
+          <div
+            key={index}
+            style={{
+              color: getCommandColor(log),
+              marginTop: log.startsWith('>') ? '10px' : '0',
+            }}
+          >
+            {log}
+          </div>
         ))}
       </div>
       <div style={inputWrapperStyle}>
@@ -92,8 +119,8 @@ const promptStyle: React.CSSProperties = {
 
 const inputStyle: React.CSSProperties = {
   backgroundColor: '#1e1e1e',
+  color: '#FFF',
   fontFamily: 'monospace',
-  color: '#6ad46a',
   fontWeight: 'bold',
   border: 'none',
   outline: 'none',
