@@ -3,10 +3,10 @@ import React, { useState, KeyboardEvent } from 'react';
 const getDate = () => {
   const today = new Date();
   const year = today.getFullYear();
-  const month = (today.getMonth() + 1).toString().padStart(2, "0");
-  const date = today.getDate().toString().padStart(2, "0");
+  const month = (today.getMonth() + 1).toString().padStart(2, '0');
+  const date = today.getDate().toString().padStart(2, '0');
   return `${year}-${month}-${date}`;
-}
+};
 
 const Terminal: React.FC = () => {
   const [input, setInput] = useState<string>('');
@@ -19,30 +19,57 @@ const Terminal: React.FC = () => {
     if (event.key === 'Enter') {
       setLogs([...logs, `> ${input}`]);
 
-      // Example custom commands
+      // available commands
       switch (input.toLowerCase()) {
         case 'help':
           setLogs((prevLogs) => [
             ...prevLogs,
-            'Available commands: help, clear',
+            'Available commands: help, clear, date, time',
           ]);
           break;
+
         case 'clear':
           setLogs([]);
           break;
+        
+        case 'date':
+          setLogs((prevLogs) => [...prevLogs, getDate()]);
+          break;
+        
+        case 'time':
+          setLogs((prevLogs) => [...prevLogs, new Date().toLocaleTimeString()]);
+          break;
+
         default:
-          setLogs((prevLogs) => [...prevLogs, 'Command not found']);
+          setLogs((prevLogs) => [...prevLogs, 'ERROR: command not found']);
       }
 
-      setInput(''); // Clear input after command is executed
+      setInput(''); // clear input after command execution
     }
+  };
+
+  const getCommandColor = (command: string) => {
+    if (command.startsWith('ERROR')) {
+      return '#c44f4fff';
+    } else if (command.startsWith('>')) {
+      return '#3f803fff';
+    }
+    return '#6ad46a';
   };
 
   return (
     <div style={terminalStyle}>
       <div style={logStyle}>
         {logs.map((log, index) => (
-          <div key={index}>{log}</div>
+          <div
+            key={index}
+            style={{
+              color: getCommandColor(log),
+              marginTop: log.startsWith('>') ? '10px' : '0',
+            }}
+          >
+            {log}
+          </div>
         ))}
       </div>
       <div style={inputWrapperStyle}>
@@ -65,15 +92,15 @@ const Terminal: React.FC = () => {
 const terminalStyle: React.CSSProperties = {
   backgroundColor: '#1e1e1e',
   color: '#6ad46a',
+  fontSize: '16px',
+  fontWeight: 'bold',
   fontFamily: 'monospace',
   padding: '20px',
+  marginBottom: '30px',
   borderRadius: '5px',
   height: '300px',
   overflowY: 'auto',
-  maxWidth: '500px',
-  marginBottom: '30px',
-  fontSize: '16px',
-  fontWeight: 'bold',
+  maxWidth: '460px',
 };
 
 const logStyle: React.CSSProperties = {
@@ -92,8 +119,8 @@ const promptStyle: React.CSSProperties = {
 
 const inputStyle: React.CSSProperties = {
   backgroundColor: '#1e1e1e',
+  color: '#FFF',
   fontFamily: 'monospace',
-  color: '#6ad46a',
   fontWeight: 'bold',
   border: 'none',
   outline: 'none',

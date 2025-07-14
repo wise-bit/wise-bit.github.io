@@ -6,7 +6,7 @@ export default function handler(_req: any, res: any) {
   try {
     const fileContents = fs.readFileSync(
       path.join(configDirectory, 'name.txt'),
-      'utf8'
+      'utf8',
     );
     res.status(200).json({ fileContents });
   } catch (error) {

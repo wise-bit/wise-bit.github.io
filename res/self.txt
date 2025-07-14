@@ -1,54 +1,54 @@
-const whois = (sat) => {
-  const summary = "i like to build cool code things";
+const whois = (sat) => return {
+  const summary = "building code n stuff";
  
   const long_description = `
     AI backend developer @ Intact //
     Building mechanical mice & keyboards //
-    Creating a fantasy bank for dungeons & dragons
+    Creating a fantasy bank for DnD
   `;
  
   // email
-  return "satrajit314@gmail.com";//%mailto:satrajit314@gmail.com
+  log("satrajit314@gmail.com");//%mailto:satrajit314@gmail.com
  
   // book a meeting
-  return "calendly.com/satrajit-c/30min";//%https://calendly.com/satrajit-c/30min
+  log("calendly.com/satrajit-c/30min");//%https://calendly.com/satrajit-c/30min
  
   // discord: wisebit
 }
 // ---
-const experience = () => {
-  // Intact Data Lab
-  const present = "AI Developer";
+const experience = () => return {
+  // Intact Data Lab (current)
+  const S_2024 = "AI Developer";
  
-  // KPMG
-  const f_2023 = "Full-stack Developer";
-  // Intact Financial Corporation
-  const s_2023_f_2022 = "AI Backend Developer";
-  // RBC (Royal Bank of Canada) 
-  const w_2022 = "SRE Software Developer";
-  // uOttawa Engineering Outreach
-  const s_2020_s_2021 = "Full-stack Developer";
+  // KPMG (4 months)
+  const F_2023 = "Full-stack Developer";
+  // IFC (8 months)
+  const F_2022 = "AI Backend Developer";
+  // RBC (4 months) 
+  const W_2022 = "SRE Software Developer";
+  // uOttawa Eng Outreach (2 years)
+  const S_2020 = "Full-stack Developer";
  
   // linkedin
-  return "linkedin.com/in/satrajit-c";//%https://www.linkedin.com/in/satrajit-c/
+  log("linkedin.com/in/satrajit-c");//%https://www.linkedin.com/in/satrajit-c/
 }
 // ---
-const projects = () => {
-  // https://github.com/wise-bit/fantasy-bank
+const projects = () => return {
+  // github.com/wise-bit/fantasy-bank
   const fantasy_bank = "bank.satrajit.ca";//%https://bank.satrajit.ca/
  
-  // https://github.com/wise-bit/worry-note
+  // github.com/wise-bit/worry-note
   const worry_note = "notes.satrajit.ca";//%https://notes.satrajit.ca/
  
-  // http://github.com/wise-bit/trials
+  //github.com/wise-bit/trials
   const untrials = "trials.satrajit.ca";//%https://trials.satrajit.ca
  
   // github
   return "github.com/wise-bit";//%https://github.com/wise-bit
 }
 // ---
-const education = () => {
-  const undergrad = {
+const education = () => return {
+  undergrad: {
     name: "University of Ottawa",
     status: "B.Sc. - Summa Cum Laude",
     program: "CS and Math Dual Major",
@@ -62,7 +62,7 @@ const education = () => {
   };
 }
 // ---
-const resume = () => {
+const resume = () => return {
   // download
-  return "/resume.pdf";//%link-resume
+  fetch("/resume.pdf");//%link-resume
 }

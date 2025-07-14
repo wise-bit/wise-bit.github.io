@@ -2,7 +2,7 @@ import { NextPage } from 'next';
 
 interface Props {}
 
-const HeaderText: NextPage<Props> = (props) => {
+const HeaderText: NextPage<Props> = () => {
   return (
     <>
       <p>
@@ -15,7 +15,11 @@ const HeaderText: NextPage<Props> = (props) => {
       <div style={{ fontSize: '18px', color: '#5d9dc2' }}>
         <div>
           also see:{' '}
-          <a href='https://log.satrajit.ca' rel='noopener noreferrer' style={{ textDecoration: 'underline' }}>
+          <a
+            href='https://log.satrajit.ca'
+            rel='noopener noreferrer'
+            style={{ textDecoration: 'underline' }}
+          >
             sat logs
           </a>
         </div>
