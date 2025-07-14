@@ -1,15 +1,18 @@
 .gameContainer {
   position: relative;
-  width: 100%;
+  width: 460px;
+  margin-top: 30px;
   height: 150px;
   border-radius: 20px;
   overflow: hidden;
   background-color: rgb(180, 255, 180);
-  background-image: repeating-linear-gradient(to right,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(255, 255, 255, 0.2) 10%,
-      transparent 10%,
-      transparent 20%);
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.2) 10%,
+    transparent 10%,
+    transparent 20%
+  );
   background-size: 200% 100%;
   animation: wind 4s linear infinite;
 }
@@ -38,6 +41,7 @@
   font-size: 12px;
   color: black;
   font-family: monospace;
+  font-weight: bold;
   text-align: center;
   display: flex;
   align-items: center;
@@ -78,7 +82,7 @@
   bottom: 0;
   width: 20px;
   height: 10px;
-  background-color: #8B4513;
+  background-color: #8b4513;
   /* Trunk color */
   border-radius: 2px;
 }

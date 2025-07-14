@@ -4,10 +4,6 @@ import { NextPage } from 'next';
 import styles from '../styles/CodeEditor.module.css';
 // import ExpandButton from './ExpandButton';
 
-// import SyntaxHighlighter from 'react-syntax-highlighter';
-// import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-// import { duotoneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-
 interface Props {
   displayText: string;
   nest: number;
@@ -90,7 +86,6 @@ const CodeEditor: NextPage<Props> = (props) => {
           })}
           {/* <code>{finalDisplayText}</code> */}
         </pre>
-        <br />
       </div>
       {/* <ExpandButton isExpanded={true} /> */}
     </>

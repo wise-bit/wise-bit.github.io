@@ -10,10 +10,10 @@ interface Props {
   username: string;
 }
 
-const Intro: NextPage<Props> = (props) => {
+const Intro: NextPage<Props> = (_props) => {
   // const { username } = props;
-  const [fileContents, setFileContents] = useState('');
   // const [nameContents, setNameContents] = useState('');
+  const [fileContents, setFileContents] = useState('');
   const [resumeLink, setResumeLink] = useState('');
 
   useEffect(() => {
@@ -26,18 +26,22 @@ const Intro: NextPage<Props> = (props) => {
         console.error('Error fetching file:', error);
       }
 
-      // try {
-      //   const nameResponse = await fetch('/api/readName');
-      //   const nameData = await nameResponse.json();
-      //   setNameContents(nameData.fileContents);
-      // } catch (error) {
-      //   console.error('Error fetching file:', error);
-      // }
+      /*
+      try {
+        const nameResponse = await fetch('/api/readName');
+        const nameData = await nameResponse.json();
+        setNameContents(nameData.fileContents);
+      } catch (error) {
+        console.error('Error fetching file:', error);
+      }
+      */
 
       try {
-        // const resumeResponse = await fetch('/api/generateResume');
-        // const resumeData = await resumeResponse.json();
-        // setResumeLink(resumeData.url);
+        /*
+        const resumeResponse = await fetch('/api/generateResume');
+        const resumeData = await resumeResponse.json();
+        setResumeLink(resumeData.url);
+        */
         setResumeLink('/files/satrajit-resume.pdf');
       } catch (error) {
         console.error('Error fetching S3 URL:', error);
@@ -52,9 +56,6 @@ const Intro: NextPage<Props> = (props) => {
   return (
     <>
       <div className={styles.mainpage}>
-        {/* <div className={styles.title}>
-          <pre>{nameContents}</pre>
-        </div> */}
 
         {/* Text header */}
         <div className={styles.title}>

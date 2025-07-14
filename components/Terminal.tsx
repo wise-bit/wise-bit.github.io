@@ -3,10 +3,10 @@ import React, { useState, KeyboardEvent } from 'react';
 const getDate = () => {
   const today = new Date();
   const year = today.getFullYear();
-  const month = (today.getMonth() + 1).toString().padStart(2, "0");
-  const date = today.getDate().toString().padStart(2, "0");
+  const month = (today.getMonth() + 1).toString().padStart(2, '0');
+  const date = today.getDate().toString().padStart(2, '0');
   return `${year}-${month}-${date}`;
-}
+};
 
 const Terminal: React.FC = () => {
   const [input, setInput] = useState<string>('');
@@ -19,7 +19,7 @@ const Terminal: React.FC = () => {
     if (event.key === 'Enter') {
       setLogs([...logs, `> ${input}`]);
 
-      // Example custom commands
+      // available commands
       switch (input.toLowerCase()) {
         case 'help':
           setLogs((prevLogs) => [
@@ -34,7 +34,7 @@ const Terminal: React.FC = () => {
           setLogs((prevLogs) => [...prevLogs, 'Command not found']);
       }
 
-      setInput(''); // Clear input after command is executed
+      setInput(''); // clear input after command execution
     }
   };
 
@@ -65,15 +65,15 @@ const Terminal: React.FC = () => {
 const terminalStyle: React.CSSProperties = {
   backgroundColor: '#1e1e1e',
   color: '#6ad46a',
+  fontSize: '16px',
+  fontWeight: 'bold',
   fontFamily: 'monospace',
   padding: '20px',
+  marginBottom: '30px',
   borderRadius: '5px',
   height: '300px',
   overflowY: 'auto',
-  maxWidth: '500px',
-  marginBottom: '30px',
-  fontSize: '16px',
-  fontWeight: 'bold',
+  maxWidth: '460px',
 };
 
 const logStyle: React.CSSProperties = {

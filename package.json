@@ -1,6 +1,6 @@
 {
   "name": "wise-bit-home",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "homepage": "https://satrajit.ca/",
   "scripts": {
@@ -10,28 +10,30 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "format": "prettier --log-level warn --write \"**/*.{jsx,js}\""
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.844.0",
+    "@aws-sdk/s3-request-presigner": "^3.844.0",
     "fs": "^0.0.1-security",
-    "next": "12.1.6",
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
-    "react-syntax-highlighter": "^15.5.0"
+    "next": "^15.3.5",
+    "prettier": "^3.6.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@types/node": "18.14.1",
-    "@types/react": "18.0.9",
-    "@types/react-dom": "18.0.3",
-    "autoprefixer": "^10.4.14",
-    "aws-sdk": "^2.1545.0",
-    "dotenv": "^16.4.1",
-    "eslint": "8.15.0",
-    "eslint-config-next": "12.1.6",
-    "gh-pages": "^3.2.3",
-    "markdown-to-jsx": "^7.3.2",
-    "postcss": "^8.4.23",
-    "tailwindcss": "^3.3.2",
-    "typescript": "4.6.4"
+    "@types/node": "24.0.13",
+    "@types/react": "19.1.8",
+    "@types/react-dom": "19.1.6",
+    "autoprefixer": "^10.4.21",
+    "dotenv": "^17.2.0",
+    "eslint": "9.31.0",
+    "eslint-config-next": "15.3.5",
+    "gh-pages": "^6.3.0",
+    "markdown-to-jsx": "^7.7.10",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11",
+    "typescript": "5.8.3"
   }
 }

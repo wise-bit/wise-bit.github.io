@@ -12,11 +12,13 @@ const Dino: React.FC = () => {
 
   useEffect(() => {
     let timeoutId: NodeJS.Timeout;
+
     const spawnTree = () => {
       setTrees((prevTrees) => [...prevTrees, { id: Date.now(), x: 100 }]);
       const randomInterval = (Math.floor(Math.random() * 4) + 1) * 1000;
       timeoutId = setTimeout(spawnTree, randomInterval);
     };
+
     spawnTree();
     return () => clearTimeout(timeoutId);
   }, []);
@@ -30,11 +32,13 @@ const Dino: React.FC = () => {
           .filter((tree) => tree.x > -100);
       });
 
+      // stop jump after a short time
       if (trees.some((tree) => tree.x < 30 && tree.x > 0)) {
         setIsJumping(true);
-        setTimeout(() => setIsJumping(false), 500); // Stop jump after a short time
+        setTimeout(() => setIsJumping(false), 500);
       }
     }, 30);
+
     return () => clearInterval(interval);
   }, [trees]);
 

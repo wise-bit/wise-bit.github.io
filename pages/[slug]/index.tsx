@@ -27,7 +27,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 
 const MarkdownFilePage = ({ fileContents }: MarkdownFilePageProps) => {
   return (
-    <div style={{margin: '50px'}}>
+    <div style={{ margin: '50px' }}>
       <Markdown>{fileContents}</Markdown>
     </div>
   );
