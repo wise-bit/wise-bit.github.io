@@ -3,7 +3,8 @@
   flex-direction: column;
   align-items: flex-start;
   position: relative;
-  width: 460px;
+  width: 100%;
+  max-width: 460px;
   white-space: normal;
   overflow: auto;
   overflow-wrap: break-word;

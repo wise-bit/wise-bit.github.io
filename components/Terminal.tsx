@@ -76,7 +76,7 @@ const Terminal: React.FC = () => {
         <span style={promptStyle}>user@terminal:~$</span>
         <input
           type='text'
-          placeholder='type a command or "help"...'
+          placeholder='"help" or command...'
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={handleCommand}
@@ -100,6 +100,8 @@ const terminalStyle: React.CSSProperties = {
   borderRadius: '5px',
   height: '300px',
   overflowY: 'auto',
+  overflowX: 'scroll',
+  width: '100%',
   maxWidth: '460px',
 };
 
