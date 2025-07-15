@@ -1,19 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NextPage } from 'next';
 
 import styles from '../styles/CodeEditor.module.css';
-// import ExpandButton from './ExpandButton';
 
 interface Props {
   displayText: string;
   nest: number;
   resumeLink: string;
-  defaultExpand: boolean;
+  preExpand: boolean;
 }
 
 const CodeEditor: NextPage<Props> = (props) => {
-  const { displayText, resumeLink, defaultExpand } = props;
-  const [expanded, setExpanded] = useState(defaultExpand);
+  const { displayText, resumeLink, preExpand } = props;
+  const [expanded, setExpanded] = useState(preExpand);
 
   const text: string[] = displayText.split('\n');
   const firstLine = text.shift() || 'const undefined;';
@@ -23,6 +22,10 @@ const CodeEditor: NextPage<Props> = (props) => {
   const handleToggle = () => {
     setExpanded(!expanded);
   };
+
+  useEffect(() => {
+    setExpanded(preExpand);
+  }, [preExpand]);
 
   return (
     <>

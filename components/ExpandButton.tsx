@@ -1,3 +1,5 @@
+// NOTE: not currently used, old implementation to improve upon
+
 import { NextPage } from 'next';
 // import styles from '../styles/ExpandButton.module.css';
 

@@ -8,40 +8,79 @@ const getDate = () => {
   return `${year}-${month}-${date}`;
 };
 
-const Terminal: React.FC = () => {
+interface TerminalProps {
+  publicKey: string;
+}
+
+const Terminal: React.FC<TerminalProps> = (props) => {
+  const { publicKey } = props;
   const [input, setInput] = useState<string>('');
   const [logs, setLogs] = useState<string[]>([
     `hi i'm a functional terminal :)`,
-    getDate(),
+    `:: ${getDate()}`,
   ]);
+
+  const directory: { [key: string]: string } = {
+    'secret.txt': '[redacted]',
+    'experience.txt': 'AI developer at Intact working with insurance data.',
+    'publickey.asc': publicKey,
+  };
 
   const handleCommand = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
       setLogs([...logs, `> ${input}`]);
 
       // available commands
-      switch (input.toLowerCase()) {
-        case 'help':
-          setLogs((prevLogs) => [
-            ...prevLogs,
-            'Available commands: help, clear, date, time',
-          ]);
-          break;
+      if (input.startsWith('cat')) {
+        const fileName = input.split(' ')[1];
+        const fileContent = directory[fileName];
+        if (!fileContent) {
+          setLogs((prevLogs) => [...prevLogs, 'ERROR: file not found']);
+        } else {
+          setLogs((prevLogs) => [...prevLogs, fileContent]);
+        }
+      } else {
+        // all other available commands
+        switch (input.toLowerCase()) {
+          case 'help':
+            setLogs((prevLogs) => [
+              ...prevLogs,
+              'Available commands: help, clear, date, time, ???, ls, dir, cat',
+            ]);
+            break;
 
-        case 'clear':
-          setLogs([]);
-          break;
-        
-        case 'date':
-          setLogs((prevLogs) => [...prevLogs, getDate()]);
-          break;
-        
-        case 'time':
-          setLogs((prevLogs) => [...prevLogs, new Date().toLocaleTimeString()]);
-          break;
+          case 'clear':
+            setLogs([]);
+            break;
 
-        default:
-          setLogs((prevLogs) => [...prevLogs, 'ERROR: command not found']);
+          case 'date':
+            setLogs((prevLogs) => [...prevLogs, getDate()]);
+            break;
+
+          case 'time':
+            setLogs((prevLogs) => [
+              ...prevLogs,
+              new Date().toLocaleTimeString(),
+            ]);
+            break;
+
+          case 'ls':
+            setLogs((prevLogs) => [
+              ...prevLogs,
+              Object.keys(directory).join(', '),
+            ]);
+            break;
+
+          case 'dir':
+            setLogs((prevLogs) => [
+              ...prevLogs,
+              Object.keys(directory).join(', '),
+            ]);
+            break;
+
+          default:
+            setLogs((prevLogs) => [...prevLogs, 'ERROR: command not found']);
+        }
       }
 
       setInput(''); // clear input after command execution
@@ -51,7 +90,7 @@ const Terminal: React.FC = () => {
   const getCommandColor = (command: string) => {
     if (command.startsWith('ERROR')) {
       return '#c44f4fff';
-    } else if (command.startsWith('>')) {
+    } else if (command.startsWith('>') || command.startsWith('::')) {
       return '#3f803fff';
     }
     return '#6ad46a';
@@ -88,7 +127,6 @@ const Terminal: React.FC = () => {
   );
 };
 
-// CSS in JS styling
 const terminalStyle: React.CSSProperties = {
   backgroundColor: '#1e1e1e',
   color: '#6ad46a',
