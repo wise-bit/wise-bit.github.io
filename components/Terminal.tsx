@@ -1,4 +1,4 @@
-import React, { useState, KeyboardEvent } from 'react';
+import React, { KeyboardEvent, useEffect, useState } from 'react';
 
 const getDate = () => {
   const today = new Date();
@@ -15,9 +15,11 @@ interface TerminalProps {
 const Terminal: React.FC<TerminalProps> = (props) => {
   const { publicKey } = props;
   const [input, setInput] = useState<string>('');
+  const [historyPtr, setHistoryPtr] = useState<number>(0);
+  const [inputCommands, setInputCommands] = useState<string[]>([]);
   const [logs, setLogs] = useState<string[]>([
     `hi i'm a functional terminal :)`,
-    `:: ${getDate()}`,
+    `: ${getDate()}`,
   ]);
 
   const directory: { [key: string]: string } = {
@@ -26,31 +28,74 @@ const Terminal: React.FC<TerminalProps> = (props) => {
     'publickey.asc': publicKey,
   };
 
+  const commandList: string[] = [
+    'help',
+    'clear',
+    'copylast',
+    'date',
+    'time',
+    '???',
+    'ls',
+    'dir',
+    'cat',
+    'vim',
+  ];
+
   const handleCommand = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
+      // c:
+      // enter user command
+      const raw_input: string = input.trim();
+
       setLogs([...logs, `> ${input}`]);
+      setInputCommands([...inputCommands, raw_input]);
+      setHistoryPtr(0);
 
       // available commands
-      if (input.startsWith('cat')) {
-        const fileName = input.split(' ')[1];
-        const fileContent = directory[fileName];
-        if (!fileContent) {
-          setLogs((prevLogs) => [...prevLogs, 'ERROR: file not found']);
+      if (raw_input.startsWith('cat')) {
+        // i:
+        // read files
+        const inputParts = raw_input.split(' ');
+        if (inputParts.length != 2) {
+          setLogs((prevLogs) => [...prevLogs, 'ERROR syntax: cat <filename>']);
         } else {
-          setLogs((prevLogs) => [...prevLogs, fileContent]);
+          const fileName = inputParts[1];
+          const fileContent = directory[fileName];
+          if (!fileContent) {
+            setLogs((prevLogs) => [...prevLogs, 'ERROR: file not found']);
+          } else {
+            setLogs((prevLogs) => [...prevLogs, fileContent]);
+          }
         }
+      } else if (raw_input.startsWith('vim')) {
+        // i:
+        // all vim operations
+        setLogs((prevLogs) => [...prevLogs, 'coming soon...']);
       } else {
+        // i:
         // all other available commands
-        switch (input.toLowerCase()) {
+        switch (raw_input.toLowerCase()) {
           case 'help':
             setLogs((prevLogs) => [
               ...prevLogs,
-              'Available commands: help, clear, date, time, ???, ls, dir, cat',
+              'Available commands: ' + commandList.join(', '),
             ]);
             break;
 
           case 'clear':
             setLogs([]);
+            break;
+
+          case 'cls':
+            setLogs([]);
+            break;
+
+          case 'copylast':
+            navigator.clipboard.writeText(logs[logs.length - 1]);
+            setLogs((prevLogs) => [
+              ...prevLogs,
+              ': copied last log to clipboard!',
+            ]);
             break;
 
           case 'date':
@@ -84,20 +129,51 @@ const Terminal: React.FC<TerminalProps> = (props) => {
       }
 
       setInput(''); // clear input after command execution
+
+      const logDiv = document.querySelector<HTMLDivElement>('#terminal-input');
+      if (logDiv) {
+        logDiv.scrollTop = logDiv.scrollHeight;
+      }
+    } else if (event.key === 'Escape') {
+      // c:
+      // clearn input
+      setInput('');
+    } else if (event.key === 'ArrowUp') {
+      // c:
+      // go up in history
+      if (historyPtr < inputCommands.length) {
+        setInput(inputCommands[inputCommands.length - historyPtr - 1]);
+        setHistoryPtr(historyPtr + 1);
+      }
+    } else if (event.key === 'ArrowDown') {
+      // c:
+      // go down in history
+      if (historyPtr > 0) {
+        setInput(inputCommands[inputCommands.length - historyPtr]);
+        setHistoryPtr(historyPtr - 1);
+      }
     }
   };
 
   const getCommandColor = (command: string) => {
     if (command.startsWith('ERROR')) {
       return '#c44f4fff';
-    } else if (command.startsWith('>') || command.startsWith('::')) {
+    } else if (command.startsWith('>') || command.startsWith(':')) {
       return '#3f803fff';
     }
     return '#6ad46a';
   };
 
+  useEffect(() => {
+    const terminalContainer = document.getElementById('terminal');
+    terminalContainer?.scrollTo({
+      top: terminalContainer.scrollHeight,
+      behavior: 'smooth',
+    });
+  }, [logs]);
+
   return (
-    <div style={terminalStyle}>
+    <div style={terminalStyle} id='terminal'>
       <div style={logStyle}>
         {logs.map((log, index) => (
           <div
