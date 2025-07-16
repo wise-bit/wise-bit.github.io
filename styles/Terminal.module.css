@@ -8,7 +8,6 @@
   width: 100%;
   margin-bottom: 30px;
   border-radius: 5px;
-  overflow: scroll;
 }
 
 .terminal {
@@ -17,7 +16,7 @@
   height: 400px;
   width: 100%;
   overflow-y: auto;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .log {
