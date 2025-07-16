@@ -63,10 +63,12 @@ const Home: NextPage<Props> = (_props) => {
   }, []);
 
   const handleKeydown = useCallback((e: KeyboardEvent) => {
-    if (e.key === '-' || e.key === '_') {
-      setExpandAll(false);
-    } else if (e.key === '+' || e.key === '=') {
-      setExpandAll(true);
+    if (document.activeElement?.tagName !== 'INPUT') {
+      if (e.key === '-' || e.key === '_') {
+        setExpandAll(false);
+      } else if (e.key === '+' || e.key === '=') {
+        setExpandAll(true);
+      }
     }
   }, []);
 
@@ -88,7 +90,7 @@ const Home: NextPage<Props> = (_props) => {
         </div>
 
         {/* Terminal */}
-        <div>
+        <div className={styles.terminal}>
           <Terminal publicKey={publicKey} />
         </div>
 

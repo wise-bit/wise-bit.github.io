@@ -1,0 +1,83 @@
+.terminalContainer {
+  background-color: #1e1e1e;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: monospace;
+  padding: 20px;
+  height: auto;
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  overflow: scroll;
+}
+
+.terminal {
+  color: #6ad46a;
+  caret-color: #6ad46a;
+  height: 400px;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: scroll;
+}
+
+.log {
+  margin-bottom: 10px;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.prompt {
+  margin-right: 10px;
+  color: #bed4be;
+}
+
+.terminalInput {
+  background-color: #1e1e1e;
+  color: #fff;
+  font-family: monospace;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding-left: 0px;
+  font-size: 16px;
+}
+
+.windowFakeButtonSet {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.windowFakeButton {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  border-radius: 50%;
+}
+
+.windowExpandButton {
+  margin-left: auto;
+  color: #e79de4;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 10vh;
+  left: 10vw;
+  width: 80vw;
+  height: 80vh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
