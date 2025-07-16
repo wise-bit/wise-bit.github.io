@@ -74,6 +74,9 @@ const Terminal: React.FC<TerminalProps> = (props) => {
       } else if (raw_input.startsWith('vim')) {
         // i: all vim operations
         setLogs((prevLogs) => [...prevLogs, 'coming soon...']);
+      } else if (raw_input.startsWith('sudo')) {
+        // i: all sudo operations
+        setLogs((prevLogs) => [...prevLogs, 'ERROR: admin privileges missing']);
       } else {
         // i: all other available commands
         switch (raw_input.toLowerCase()) {
