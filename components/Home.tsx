@@ -5,6 +5,7 @@ import CodeEditor from './CodeEditor';
 import HeaderText from './HeaderText';
 import Terminal from './Terminal';
 import Dino from './Dino';
+import BottomText from './BottomText';
 
 interface Props {
   username: string;
@@ -112,6 +113,11 @@ const Home: NextPage<Props> = (_props) => {
         {/* Dino */}
         <div>
           <Dino />
+        </div>
+
+        {/* Bottom Text */}
+        <div className={styles.bottomText}>
+          <BottomText />
         </div>
       </div>
     </>

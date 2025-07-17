@@ -24,16 +24,18 @@ const HeaderText: NextPage<Props> = () => {
           </a>
         </div>
       </div>
-      <p>
+      <p
+        style={{
+          paddingBottom: '30px',
+          borderBottom: '2px solid #b7d6e7ff',
+          marginBottom: '30px',
+        }}
+      >
         {`
         this text mostly exists because SEO can't process my fancy
         custom interactive code layout ;)
         `}
       </p>
-
-      <br />
-      <hr />
-      <br />
     </>
   );
 };
