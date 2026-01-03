@@ -4,7 +4,7 @@
   align-items: flex-start;
   position: relative;
   width: 100%;
-  max-width: 460px;
+  /* max-width: 460px; */
   white-space: normal;
   overflow: auto;
   overflow-wrap: break-word;
@@ -21,9 +21,12 @@
   padding: 0px;
   cursor: pointer;
   transition: 0.3s;
-  font-family: monospace;
-  font-weight: bold;
+  font-family: var(--font-fira-mono), monospace;
+  font-weight: 700;
   margin-left: 30px;
+  cursor:
+    url('../public/cursor_old.png') 8 8,
+    default;
 }
 
 .sign-button {
@@ -39,7 +42,10 @@
   border: solid white 3px;
   border-radius: 4px;
   padding-inline: 5px;
-  font-weight: bolder;
+  font-weight: 900;
+  cursor:
+    url('../public/cursor_old.png') 8 8,
+    default;
 }
 
 .code-block {
@@ -52,7 +58,7 @@
   border-radius: 4px;
   margin-top: 3px;
   margin-bottom: 10px;
-  font-family: monospace;
+  font-family: var(--font-fira-mono), monospace;
   font-size: 16px;
   line-height: 20px;
   margin-left: 30px;

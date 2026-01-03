@@ -1,8 +1,10 @@
+'use client';
+
 import { NextPage } from 'next';
 import { useCallback, useEffect, useState } from 'react';
 import styles from '../styles/Home.module.css';
 import CodeEditor from './CodeEditor';
-import HeaderText from './HeaderText';
+import IntroText from './IntroText';
 import Terminal from './Terminal';
 import Dino from './Dino';
 import BottomText from './BottomText';
@@ -14,6 +16,7 @@ interface Props {
 const Home: NextPage<Props> = (_props) => {
   // const { username } = props;
   // const [nameContents, setNameContents] = useState('');
+
   const [fileContents, setFileContents] = useState('');
   const [resumeLink, setResumeLink] = useState('');
   const [publicKey, setPublicKey] = useState('');
@@ -85,18 +88,18 @@ const Home: NextPage<Props> = (_props) => {
   return (
     <>
       <div className={styles.mainpage}>
-        {/* Text header */}
-        <div className={styles.title}>
-          <HeaderText />
+        {/* Intro text */}
+        <div className={styles.title} id="introText">
+          <IntroText />
         </div>
 
         {/* Terminal */}
-        <div className={styles.terminal}>
+        <div className={styles.terminal} id="terminalBox">
           <Terminal publicKey={publicKey} />
         </div>
 
         {/* Code Editor */}
-        <div>
+        <div id="portfolioBox">
           {portfolio_components.map((component, index) => {
             return (
               <CodeEditor
@@ -111,7 +114,7 @@ const Home: NextPage<Props> = (_props) => {
         </div>
 
         {/* Dino */}
-        <div>
+        <div id="dinoGame">
           <Dino />
         </div>
 

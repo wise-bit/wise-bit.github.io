@@ -15,17 +15,17 @@ body {
     Helvetica Neue,
     sans-serif;
   cursor:
-    url('../public/cursor.png') 12 12,
+    url('../public/cursor.png') 10 10,
     default;
   overflow-wrap: break-word;
-  color: #eeeeee !important;
-  background-color: #000 !important;
+  color: #eee;
+  background-color: #111;
 }
 
 a,
 a:hover {
   cursor:
-    url('../public/cursor_old.png') 12 12,
+    url('../public/cursor_old.png') 8 8,
     default;
 }
 

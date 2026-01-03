@@ -1,13 +1,13 @@
 .terminalContainer {
   background-color: #1e1e1e;
   font-size: 16px;
-  font-weight: bold;
-  font-family: monospace;
+  /* font-weight: bold; */
+  font-family: var(--font-fira-mono), monospace;
   padding: 20px;
   height: auto;
   width: 100%;
   margin-bottom: 30px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .terminal {
@@ -36,7 +36,7 @@
 .terminalInput {
   background-color: #1e1e1e;
   color: #fff;
-  font-family: monospace;
+  font-family: var(--font-fira-mono), monospace;
   font-weight: bold;
   border: none;
   outline: none;
@@ -65,7 +65,9 @@
 .windowExpandButton {
   margin-left: auto;
   color: #e79de4;
-  cursor: pointer;
+  cursor:
+    url('../public/cursor_old.png') 8 8,
+    default;
 }
 
 .modal {
