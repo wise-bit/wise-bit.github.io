@@ -1,8 +1,11 @@
 import dotenv from 'dotenv';
 import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3';
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
+import { NextResponse } from 'next/server';
 
 dotenv.config();
+
+export const runtime = 'nodejs';
 
 const s3 = new S3Client({
   region: 'ca-central-1',
@@ -12,7 +15,7 @@ const s3 = new S3Client({
   },
 });
 
-export default async function handler(_req: any, res: any) {
+export async function GET() {
   try {
     const command = new GetObjectCommand({
       Bucket: process.env.AWS_BUCKET_NAME,
@@ -22,11 +25,12 @@ export default async function handler(_req: any, res: any) {
 
     const url = await getSignedUrl(s3, command, { expiresIn: 60 * 5 });
 
-    res.status(200).json({ url });
+    return NextResponse.json({ url });
   } catch (error) {
     console.error('Error generating S3 link:', error);
-    res.status(500).json({
-      error: 'Failed to generate S3 link',
-    });
+    return NextResponse.json(
+      { error: 'Failed to generate S3 link' },
+      { status: 500 },
+    );
   }
 }
