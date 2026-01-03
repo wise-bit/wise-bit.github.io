@@ -34,6 +34,17 @@
   border-left: 2px dashed #b7d6e7ff;
 }
 
+.main::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(10vw - 2px);
+  height: 100%;
+  background-color: #000000;
+  z-index: 9;
+}
+
 .title {
   margin: 0;
   line-height: 1.15;
@@ -51,5 +62,9 @@
     margin-inline: 20px;
     padding-left: 0px;
     border: none;
+  }
+
+  .main::before {
+    width: 0px;
   }
 }

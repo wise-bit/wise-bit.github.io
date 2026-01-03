@@ -9,7 +9,7 @@ export default function Page() {
       <main className={styles.main}>
         <Navbar />
         <Home username='sat' />
-        {/* <Footer /> */}
+        <Footer />
       </main>
     </div>
   );

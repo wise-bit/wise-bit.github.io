@@ -1,0 +1,10 @@
+.footerContainer {
+  font-family: var(--font-fira-mono), monospace;
+  color: #ddd;
+  padding-bottom: 20px;
+  font-size: 14px;
+}
+
+.footerContainer a {
+  color: #a8a8ff;
+}

@@ -9,9 +9,14 @@ interface Props {
 const Navbar: NextPage<Props> = (props) => {
   return (
     <>
-      <div>asd</div>
+      <footer>
+        <div className={styles.footerContainer}>
+          Copyright © 2026 <a href='https://github.com/wise-bit'>wise-bit</a>
+        </div>
+      </footer>
     </>
   );
 };
 
 export default Navbar;
+
