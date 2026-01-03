@@ -1,6 +1,7 @@
 'use client';
 
 import { NextPage } from 'next';
+import { notFound } from 'next/navigation';
 import { useCallback, useEffect, useState } from 'react';
 import styles from '../styles/Home.module.css';
 import CodeEditor from './CodeEditor';
@@ -26,6 +27,9 @@ const Home: NextPage<Props> = (_props) => {
     const fetchFileContents = async () => {
       try {
         const fileResponse = await fetch('/api/readSelf');
+        if (!fileResponse) {
+          notFound();
+        }
         const fileData = await fileResponse.json();
         setFileContents(fileData.fileContents);
       } catch (error) {
@@ -83,24 +87,24 @@ const Home: NextPage<Props> = (_props) => {
     };
   }, [handleKeydown]);
 
-  const portfolio_components = fileContents.split(/\r?\n\/\/ ---\r?\n/);
+  const portfolio_components = fileContents?.split(/\r?\n\/\/ ---\r?\n/);
 
   return (
     <>
       <div className={styles.mainpage}>
         {/* Intro text */}
-        <div className={styles.title} id="introText">
+        <div className={styles.title} id='introText'>
           <IntroText />
         </div>
 
         {/* Terminal */}
-        <div className={styles.terminal} id="terminalBox">
+        <div className={styles.terminal} id='terminalBox'>
           <Terminal publicKey={publicKey} />
         </div>
 
         {/* Code Editor */}
-        <div id="portfolioBox">
-          {portfolio_components.map((component, index) => {
+        <div id='portfolioBox'>
+          {portfolio_components?.map((component, index) => {
             return (
               <CodeEditor
                 key={index}
@@ -114,7 +118,7 @@ const Home: NextPage<Props> = (_props) => {
         </div>
 
         {/* Dino */}
-        <div id="dinoGame">
+        <div id='dinoGame'>
           <Dino />
         </div>
 
@@ -129,3 +133,4 @@ const Home: NextPage<Props> = (_props) => {
 
 // export component
 export default Home;
+

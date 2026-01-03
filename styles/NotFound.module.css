@@ -1,0 +1,37 @@
+.container {
+  color: #ccc;
+  font-family: var(--font-fira-mono), monospace;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: auto;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.homeBtnContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.homeBtn {
+  width: fit-content;
+  font-weight: 700;
+  color: white;
+  border-bottom: 3px solid white;
+  cursor:
+    url('../public/cursor_old.png') 8 8,
+    default;
+}
+
+.notFoundImage {
+  padding: 2px;
+  border: 2px solid #a8a8ff;
+  border-radius: 10px;
+}

@@ -1,18 +1,25 @@
 import fs from 'fs';
 import path from 'path';
+import { NextResponse } from 'next/server';
 
-export default function handler(_req: any, res: any) {
+export const runtime = 'nodejs';
+
+export async function GET() {
   const configDirectory = path.resolve(process.cwd(), 'res');
+
   try {
     const fileContents = fs.readFileSync(
       path.join(configDirectory, 'name.txt'),
-      'utf8',
+      'utf8'
     );
-    res.status(200).json({ fileContents });
+
+    return NextResponse.json({ fileContents });
   } catch (error) {
     console.error('Error reading file:', error);
-    res.status(500).json({
-      error: 'Failed to read file',
-    });
+
+    return NextResponse.json(
+      { error: 'Failed to read file' },
+      { status: 500 }
+    );
   }
 }

@@ -54,7 +54,7 @@ const education = () => return {
     program: "CS and Math Dual Major",
     clubs: [
       "Hack the Hill",
-      "Computer Science Student Association",
+      "CS Student Association",
       "uOttaHack",
       "Computer Science Club",
       "English Debating Society"

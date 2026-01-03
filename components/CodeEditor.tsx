@@ -42,7 +42,7 @@ const CodeEditor: NextPage<Props> = (props) => {
             {expanded ? '-' : '+'}
           </button>
           {firstLineSplit[0] + ' '}
-          <span style={{ textDecoration: 'underline' }}>
+          <span style={{ color: '#a8a8ff' }}>
             {firstLineSplit[1]}
           </span>
           {' ' + firstLineSplit.slice(2, firstLineSplit.length - 1).join(' ')}
