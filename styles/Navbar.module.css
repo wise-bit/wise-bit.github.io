@@ -16,13 +16,49 @@
 }
 
 .hiText {
-  color: white;
+  /* color: white; */
+  animation: rainbow 1s linear infinite;
   margin-right: 20px;
 }
 
 .navBtn {
   color: #a8a8ff;
+  padding: 4px;
+  border: 0px solid black;
+  border-radius: 10px;
   cursor:
     url('../public/cursor_old.png') 8 8,
     default;
+}
+
+.navBtn:hover {
+  background: #000000;
+  animation: rainbow 0.5s linear infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    color: #ff0000;
+  }
+  20% {
+    color: #ff7f00;
+  }
+  40% {
+    color: #ffff00;
+  }
+  60% {
+    color: #00ff00;
+  }
+  80% {
+    color: #9494ff;
+  }
+  100% {
+    color: #ff0000;
+  }
+}
+
+@media (max-width: 768px) {
+  .navContainer {
+    gap: 10px;
+  }
 }

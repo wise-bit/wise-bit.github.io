@@ -13,12 +13,13 @@ export default function NotFound() {
           <Link href='/'>back to home</Link>
         </div>
       </div>
-      <div className={styles.notFoundImage}>
+      <div className={styles.notFoundImageContainer}>
         <Image
           src='/files/calvin_hobbes_invert.png'
           alt='Comic Strip Image'
           width={500}
           height={500}
+          className={styles.notFoundImage}
           loading='eager'
         />
       </div>

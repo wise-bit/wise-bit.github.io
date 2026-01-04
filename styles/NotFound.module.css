@@ -31,7 +31,16 @@
 }
 
 .notFoundImage {
-  padding: 2px;
+  margin: 20px;
   border: 2px solid #a8a8ff;
   border-radius: 10px;
+  height: 500px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .notFoundImage {
+    height: auto;
+    width: 80vw;
+  }
 }

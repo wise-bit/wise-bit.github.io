@@ -97,6 +97,12 @@ const Home: NextPage<Props> = (_props) => {
           <IntroText />
         </div>
 
+        <div>
+          <div className={styles.marquee}>
+            <p>{'rest in peace <marquee> tags (1995 - 2014)'}</p>
+          </div>
+        </div>
+
         {/* Terminal */}
         <div className={styles.terminal} id='terminalBox'>
           <Terminal publicKey={publicKey} />
@@ -133,4 +139,3 @@ const Home: NextPage<Props> = (_props) => {
 
 // export component
 export default Home;
-

@@ -30,6 +30,38 @@
   padding-top: 20px;
 }
 
+.marquee {
+  width: 100%;
+  /* line-height: auto; */
+  border: 0px solid black;
+  border-radius: 10px;
+  background-color: #101d00;
+  color: #eeeeee;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.marquee p {
+  font-family: var(--font-fira-mono), monospace;
+  font-size: 12px;
+  font-weight: 400;
+  display: inline-block;
+  padding: 0px;
+  margin: 10px;
+  padding-left: 100%;
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
 /* @media screen and (max-width: 767px) {
   .mainpage {
     margin-top: -200px;
